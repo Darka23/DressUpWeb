@@ -2049,11 +2049,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DressUp\\DressUp\\DressUp.Infrastructure\\DressUp.Infrastructure.csproj",
+      "projectUniqueName": "E:\\DressUpGit\\DressUpWeb\\DressUp.Infrastructure\\DressUp.Infrastructure.csproj",
       "projectName": "DressUp.Infrastructure",
-      "projectPath": "E:\\DressUp\\DressUp\\DressUp.Infrastructure\\DressUp.Infrastructure.csproj",
+      "projectPath": "E:\\DressUpGit\\DressUpWeb\\DressUp.Infrastructure\\DressUp.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\DressUp\\DressUp\\DressUp.Infrastructure\\obj\\",
+      "outputPath": "E:\\DressUpGit\\DressUpWeb\\DressUp.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

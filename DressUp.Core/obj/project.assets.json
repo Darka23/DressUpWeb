@@ -1975,11 +1975,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DressUp\\DressUp\\DressUp.Core\\DressUp.Core.csproj",
+      "projectUniqueName": "E:\\DressUpGit\\DressUpWeb\\DressUp.Core\\DressUp.Core.csproj",
       "projectName": "DressUp.Core",
-      "projectPath": "E:\\DressUp\\DressUp\\DressUp.Core\\DressUp.Core.csproj",
+      "projectPath": "E:\\DressUpGit\\DressUpWeb\\DressUp.Core\\DressUp.Core.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\DressUp\\DressUp\\DressUp.Core\\obj\\",
+      "outputPath": "E:\\DressUpGit\\DressUpWeb\\DressUp.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1996,8 +1996,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\DressUp\\DressUp\\DressUp.Infrastructure\\DressUp.Infrastructure.csproj": {
-              "projectPath": "E:\\DressUp\\DressUp\\DressUp.Infrastructure\\DressUp.Infrastructure.csproj"
+            "E:\\DressUpGit\\DressUpWeb\\DressUp.Infrastructure\\DressUp.Infrastructure.csproj": {
+              "projectPath": "E:\\DressUpGit\\DressUpWeb\\DressUp.Infrastructure\\DressUp.Infrastructure.csproj"
             }
           }
         }

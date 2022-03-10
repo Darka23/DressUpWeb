@@ -27,6 +27,84 @@ form#account div, form#registerForm div{
     margin-top: 10px;
 }
 
+
+/*------Details Page------*/
+
+.cont1 {
+    display: block;
+    float: left;
+    padding-left: 250px;
+}
+
+.labout {
+    display: block;
+    float: left;
+    margin: 0 3.6% 0 0;
+}
+
+.singel_right {
+    margin-top: 3em;
+}
+
+ul.rating li a:hover, .price_single a:hover, ul.size li a:hover {
+    color: #ee4a02;
+    text-decoration: none;
+}
+
+.price_single {
+    font-size: 1.3em;
+    margin: 0.5em 0 1.5em;
+}
+
+    .price_single a {
+        color: #999;
+        font-size: 13px;
+    }
+
+.btn_form form input[type="submit"] {
+    font-size: 0.85em;
+    padding: 10px 10px;
+}
+
+.btn_form form input[type="submit"] {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: inline-block;
+    font-size: 1em;
+    padding: 13px 20px;
+    background: #fb4d01;
+    color: #FFF;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin-top: 2em;
+}
+
+    .btn_form form input[type="submit"]:hover {
+        background: #ee4a02;
+    }
+
+.etalage_zoom_area div {
+    width: 250px !important;
+    height: 250px !important;
+}
+
+.etalage_zoom_area div {
+    width: 350px !important;
+    height: 350px !important;
+}
+
+.etalage_zoom_area div {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+/*------Details Page------*/
+
+
 /*------Shop datalist pages(Begining)------*/
 .w3l-ecommerce-main {
     /********************* Shopping Demo-2 **********************/
