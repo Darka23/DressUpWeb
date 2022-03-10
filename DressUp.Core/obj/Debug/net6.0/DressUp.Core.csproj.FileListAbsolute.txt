@@ -1,0 +1,15 @@
+E:\DressUp\DressUp\DressUp.Core\bin\Debug\net6.0\DressUp.Core.deps.json
+E:\DressUp\DressUp\DressUp.Core\bin\Debug\net6.0\DressUp.Core.dll
+E:\DressUp\DressUp\DressUp.Core\bin\Debug\net6.0\ref\DressUp.Core.dll
+E:\DressUp\DressUp\DressUp.Core\bin\Debug\net6.0\DressUp.Core.pdb
+E:\DressUp\DressUp\DressUp.Core\bin\Debug\net6.0\DressUp.Infrastructure.dll
+E:\DressUp\DressUp\DressUp.Core\bin\Debug\net6.0\DressUp.Infrastructure.pdb
+E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\DressUp.Core.csproj.AssemblyReference.cache
+E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\DressUp.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\DressUp.Core.AssemblyInfoInputs.cache
+E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\DressUp.Core.AssemblyInfo.cs
+E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\DressUp.Core.csproj.CoreCompileInputs.cache
+E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\DressUp.Core.csproj.CopyComplete
+E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\DressUp.Core.dll
+E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\ref\DressUp.Core.dll
+E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\DressUp.Core.pdb

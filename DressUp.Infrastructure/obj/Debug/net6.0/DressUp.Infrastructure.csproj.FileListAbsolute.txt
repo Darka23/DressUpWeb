@@ -1,0 +1,14 @@
+E:\DressUp\DressUp\DressUp.Infrastructure\bin\Debug\net6.0\DressUp.Infrastructure.deps.json
+E:\DressUp\DressUp\DressUp.Infrastructure\bin\Debug\net6.0\DressUp.Infrastructure.dll
+E:\DressUp\DressUp\DressUp.Infrastructure\bin\Debug\net6.0\ref\DressUp.Infrastructure.dll
+E:\DressUp\DressUp\DressUp.Infrastructure\bin\Debug\net6.0\DressUp.Infrastructure.pdb
+E:\DressUp\DressUp\DressUp.Infrastructure\obj\Debug\net6.0\DressUp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\DressUp\DressUp\DressUp.Infrastructure\obj\Debug\net6.0\DressUp.Infrastructure.AssemblyInfoInputs.cache
+E:\DressUp\DressUp\DressUp.Infrastructure\obj\Debug\net6.0\DressUp.Infrastructure.AssemblyInfo.cs
+E:\DressUp\DressUp\DressUp.Infrastructure\obj\Debug\net6.0\DressUp.Infrastructure.csproj.CoreCompileInputs.cache
+E:\DressUp\DressUp\DressUp.Infrastructure\obj\Debug\net6.0\DressUp.Infrastructure.dll
+E:\DressUp\DressUp\DressUp.Infrastructure\obj\Debug\net6.0\ref\DressUp.Infrastructure.dll
+E:\DressUp\DressUp\DressUp.Infrastructure\obj\Debug\net6.0\DressUp.Infrastructure.pdb
+E:\DressUp\DressUp\DressUp.Infrastructure\obj\Debug\net6.0\DressUp.Infrastructure.csproj.AssemblyReference.cache
+E:\DressUp\DressUp\DressUp.Infrastructure\bin\Debug\net6.0\DressUp.Infrastructure.runtimeconfig.json
+E:\DressUp\DressUp\DressUp.Infrastructure\obj\Debug\net6.0\DressUp.Infrastructure.genruntimeconfig.cache
