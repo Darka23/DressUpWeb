@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "0e0ad25b-f484-4a94-b868-691fa96004ca": {
+      "ProjectGuid": "0e0ad25b-f484-4a94-b868-691fa96004ca",
+      "DisplayName": "DressUp",
+      "ColorIndex": 0
+    },
+    "2b000131-3407-400f-8e62-ad32608fab84": {
+      "ProjectGuid": "2b000131-3407-400f-8e62-ad32608fab84",
+      "DisplayName": "DressUp.Infrastructure",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,4 +1,4 @@
-using DressUp.Data;
+using DressUp.Infrastructure.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
