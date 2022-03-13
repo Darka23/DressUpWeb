@@ -1,6 +1,26 @@
-﻿namespace DressUp.Extensions
+﻿using Microsoft.EntityFrameworkCore;
+using DressUp.Infrastructure.Data;
+using DressUp.Infrastructure.Data.Repositories;
+
+namespace Microsoft.Extensions.DependencyInjection
 {
-    public class ServiceCollectionExtension
+    public static class ServiceCollectionExtension
     {
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services)
+        {
+            services.AddScoped<IApplicationDbRepository, ApplicationDbRepository>();
+
+            return services;
+        }
+
+        public static IServiceCollection AddApplicationDbContexts(this IServiceCollection services, IConfiguration config)
+        {
+            var connectionString = config.GetConnectionString("DefaultConnection");
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(connectionString));
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
+            return services;
+        }
     }
 }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DressUp.Infrastructure.Data.Common;
 
 namespace DressUp.Infrastructure.Data.Repositories
 {
-    internal interface IApplicationDbRepository
+    public interface IApplicationDbRepository : IRepository
     {
+
     }
 }
