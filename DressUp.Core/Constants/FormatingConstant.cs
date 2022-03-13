@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace DressUp.Core.Constants
 {
-    internal class FormatingConstants
+    public class FormatingConstants
     {
+        public const string NormalDateFormat = "dd.MM.yyyy";
     }
 }

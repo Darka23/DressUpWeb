@@ -3,9 +3,9 @@ using DressUp.Infrastructure.Data.Common;
 
 namespace DressUp.Infrastructure.Data.Repositories
 {
-    public class ApplicatioDbRepository : Repository, IApplicationDbRepository
+    public class ApplicationDbRepository : Repository, IApplicationDbRepository
     {
-        public ApplicatioDbRepository(ApplicationDbContext context)
+        public ApplicationDbRepository(ApplicationDbContext context)
         {
             this.Context = context;
         }
