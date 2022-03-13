@@ -16,8 +16,8 @@ namespace DressUp.Controllers
         public IActionResult ClothesChildren()
         {
             return View();
-        }
-        public IActionResult Accessories()
+        }        
+        public IActionResult Details()
         {
             return View();
         }
