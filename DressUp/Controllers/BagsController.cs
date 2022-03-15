@@ -2,7 +2,7 @@
 
 namespace DressUp.Controllers
 {
-    public class BagsController : Controller
+    public class BagsController : BaseController
     {
         public IActionResult Bags()
         {

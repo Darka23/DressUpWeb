@@ -2308,7 +2308,8 @@
       "DressUp.Core/1.0.0": {
         "dependencies": {
           "DressUp.Infrastructure": "1.0.0",
-          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.2"
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.2",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.2"
         },
         "runtime": {
           "DressUp.Core.dll": {}
@@ -2318,7 +2319,8 @@
         "dependencies": {
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.2",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.2"
         },
         "runtime": {
           "DressUp.Infrastructure.dll": {}

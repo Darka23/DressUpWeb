@@ -27,5 +27,10 @@ namespace DressUp.Infrastructure.Data.Models
         [Required]
         [StringLength(5)]
         public string Size { get; set; }
+
+        [StringLength(250)]
+        public string Description { get; set; }
+
+
     }
 }

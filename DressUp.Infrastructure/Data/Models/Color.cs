@@ -13,7 +13,7 @@ namespace DressUp.Infrastructure.Data.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(100, MinimumLength = 5)]
+        [StringLength(50)]
         public string ColorName { get; set; }
     }
 }
