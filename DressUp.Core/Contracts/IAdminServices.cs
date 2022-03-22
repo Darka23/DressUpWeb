@@ -1,4 +1,5 @@
 ﻿using DressUp.Core.Models;
+using DressUp.Infrastructure.Data.Models;
 
 namespace DressUp.Core.Contracts
 {
@@ -7,5 +8,9 @@ namespace DressUp.Core.Contracts
         void AddColor(ColorViewModel model);
 
         void AddMaterial(MaterialViewModel model);
+
+        IEnumerable<Color> GetColors();
+        IEnumerable<Material> GetMaterials();
+
     }
 }

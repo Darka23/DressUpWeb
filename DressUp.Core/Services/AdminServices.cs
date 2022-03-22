@@ -16,7 +16,7 @@ namespace DressUp.Core.Services
         }
 
         public void AddColor(ColorViewModel model)
-        {
+        {            
             repo.AddAsync(new Color
             {
                 ColorName = model.ColorName,
@@ -27,12 +27,24 @@ namespace DressUp.Core.Services
 
         public void AddMaterial(MaterialViewModel model)
         {
+            
+
             repo.AddAsync(new Material
             {
                 MaterialName = model.MaterialName,
             });
 
             repo.SaveChanges();
+        }
+
+        public IEnumerable<Color> GetColors()
+        {
+            return repo.All<Color>().ToList();
+        }
+
+        public IEnumerable<Material> GetMaterials()
+        {
+            return repo.All<Material>().ToList();
         }
     }
 }
