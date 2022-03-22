@@ -1,6 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using DressUp.Infrastructure.Data;
 using DressUp.Infrastructure.Data.Repositories;
+using DressUp.Infrastructure.Data.Common;
+using DressUp.Core.Contracts;
+using DressUp.Core.Services;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -9,6 +12,8 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddScoped<IApplicationDbRepository, ApplicationDbRepository>();
+            services.AddScoped<IAdminServices, AdminServices>();
+
 
             return services;
         }
