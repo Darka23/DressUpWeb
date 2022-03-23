@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace DressUp.Core.Models
     public class ClothesViewModel
     {
         [Required]
-        public string ImageUrl { get; set; }
+        public IFormFile Image { get; set; }
 
         [Required]
         [StringLength(75, MinimumLength = 3)]

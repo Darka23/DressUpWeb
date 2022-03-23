@@ -550,3 +550,4 @@ E:\DressUpGit\DressUpWeb\DressUp\obj\Debug\net6.0\DressUp.dll
 E:\DressUpGit\DressUpWeb\DressUp\obj\Debug\net6.0\ref\DressUp.dll
 E:\DressUpGit\DressUpWeb\DressUp\obj\Debug\net6.0\DressUp.pdb
 E:\DressUpGit\DressUpWeb\DressUp\obj\Debug\net6.0\DressUp.genruntimeconfig.cache
+E:\DressUpGit\DressUpWeb\DressUp\bin\Debug\net6.0\CloudinaryDotNet.dll

@@ -1,4 +1,4 @@
-﻿@model DressUp.Infrastructure.Data.Models.Cloth
+﻿@model DressUp.Core.Models.ClothesViewModel
 
 @{
     ViewData["Title"] = "Add Clothes";
@@ -12,12 +12,12 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="AddClothes">
+        <form asp-action="AddClothes" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ImageUrl" class="control-label"></label>
-                <input asp-for="ImageUrl" class="form-control" />
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" accept="image/heic, image/png, image/jpeg, image/webp" type="file" />
+                <span asp-validation-for="Image" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -35,11 +35,8 @@
                 <span asp-validation-for="Size" class="text-danger"></span>
             </div>
             <div class="form-group">
-                @*<label asp-for="Color" class="control-label"></label>
-                <input asp-for="Color" class="form-control" />*@
-
-                <label for="clotes-colors">Choose a color:</label>
-                <select name="clotes-colors" id="clotes-colors">
+                <label asp-for="Color">Choose a color:</label>
+                <select asp-for="Color">
                     @foreach (var color in colors)
                     {
                         <option value="@color.Value">@color.Text</option>
@@ -48,11 +45,8 @@
                 <span asp-validation-for="Color" class="text-danger"></span>
             </div>
             <div class="form-group">
-                @*<label asp-for="Category" class="control-label"></label>
-                <input asp-for="Category" class="form-control" />*@
-
-                <label for="clotes-categories">Choose a category:</label>
-                <select name="clotes-categories" id="clotes-categories">
+                <label asp-for="Category">Choose a category:</label>
+                <select asp-for="Category">
                     <option value="Мъже">Мъже</option>
                     <option value="Жени">Жени</option>
                     <option value="Деца">Деца</option>
@@ -60,11 +54,8 @@
                 <span asp-validation-for="Category" class="text-danger"></span>
             </div>
             <div class="form-group">
-                @*<label asp-for="Material" class="control-label"></label>
-                <input asp-for="Material" class="form-control" />*@
-
-                <label for="clotes-materials">Choose a material:</label>
-                <select name="clotes-materials" id="clotes-materials">
+                <label asp-for="Material">Choose a material:</label>
+                <select asp-for="Material">
                     @foreach (var material in materials)
                     {
                         <option value="@material.Value">@material.Text</option>
@@ -74,7 +65,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <textarea asp-for="Description" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">

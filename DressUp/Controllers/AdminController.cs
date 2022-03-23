@@ -31,16 +31,7 @@ namespace DressUp.Controllers
 
         [HttpPost]
         public IActionResult AddColor(ColorViewModel model)
-        {
-            var color = repo.All<Color>()
-                .FirstOrDefault(c => c.ColorName == model.ColorName);
-
-            if (color != null)
-            {
-                ViewBag.message = "Color already Exists!";
-                return View("Error");
-            }
-
+        {           
             adminServices.AddColor(model);
 
             return Redirect("/Admin/AdminPanel");
@@ -54,15 +45,6 @@ namespace DressUp.Controllers
         [HttpPost]
         public IActionResult AddMaterial(MaterialViewModel model)
         {
-            var color = repo.All<Material>()
-                .FirstOrDefault(c => c.MaterialName == model.MaterialName);
-
-            if (color != null)
-            {
-                ViewBag.message = "Material already Exists!";
-                return View("Error");
-            }
-
             adminServices.AddMaterial(model);
 
             return Redirect("/Admin/AdminPanel");
@@ -82,7 +64,9 @@ namespace DressUp.Controllers
         [HttpPost]
         public IActionResult AddClothes(ClothesViewModel model)
         {
-            return View();
+            adminServices.AddClothes(model);
+
+            return Redirect("/Admin/AdminPanel");
         }
 
         public IActionResult AddBags()
