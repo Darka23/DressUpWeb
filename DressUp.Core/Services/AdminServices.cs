@@ -28,7 +28,6 @@ namespace DressUp.Core.Services
         public void AddMaterial(MaterialViewModel model)
         {
             
-
             repo.AddAsync(new Material
             {
                 MaterialName = model.MaterialName,

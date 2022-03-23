@@ -4,16 +4,17 @@ using DressUp.Infrastructure.Data.Repositories;
 using DressUp.Infrastructure.Data.Common;
 using DressUp.Core.Contracts;
 using DressUp.Core.Services;
+using CloudinaryDotNet;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtension
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services)
-        {
-            services.AddScoped<IApplicationDbRepository, ApplicationDbRepository>();
-            services.AddScoped<IAdminServices, AdminServices>();
 
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services)
+        {         
+            services.AddScoped<IApplicationDbRepository, ApplicationDbRepository>();
+            services.AddScoped<IAdminServices, AdminServices>();          
 
             return services;
         }

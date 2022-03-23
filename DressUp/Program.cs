@@ -1,9 +1,11 @@
+using CloudinaryDotNet;
 using DressUp.Core.Constants;
+using DressUp.Core.Contracts;
+using DressUp.Core.Services;
 using DressUp.Infrastructure.Data;
 using DressUp.Infrastructure.Data.Identity;
 using DressUp.ModelBinders;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +24,17 @@ builder.Services.AddControllersWithViews()
         options.ModelBinderProviders.Insert(1, new DateTimeModelBinderProvider(FormatingConstants.NormalDateFormat));
         options.ModelBinderProviders.Insert(2, new DoubleModelBinderProvider());
     });
+
+Account account = new(
+                builder.Configuration["Cloudinary:CloudName"],
+                builder.Configuration["Cloudinary:ApiKey"],
+                builder.Configuration["Cloudinary:ApiSecret"]
+            );
+
+Cloudinary cloudinary = new Cloudinary(account);
+
+builder.Services.AddSingleton(cloudinary);
+builder.Services.AddTransient<ICloudinaryService, CloudinaryService>();
 
 builder.Services.AddApplicationServices();
 

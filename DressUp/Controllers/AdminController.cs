@@ -43,7 +43,7 @@ namespace DressUp.Controllers
 
             adminServices.AddColor(model);
 
-            return Redirect("/");
+            return Redirect("/Admin/AdminPanel");
         }
 
         public IActionResult AddMaterial()
@@ -65,7 +65,7 @@ namespace DressUp.Controllers
 
             adminServices.AddMaterial(model);
 
-            return Redirect("/");
+            return Redirect("/Admin/AdminPanel");
         }
 
         public IActionResult AddClothes()
