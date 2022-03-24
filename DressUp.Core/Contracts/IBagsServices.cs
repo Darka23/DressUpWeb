@@ -10,5 +10,8 @@ namespace DressUp.Core.Contracts
     public interface IBagsServices
     {
         IEnumerable<BagsListViewModel> GetBags();
+        IEnumerable<BagsListViewModel> GetBagsWomen();
+        IEnumerable<BagsListViewModel> GetBagsMen();
+        IEnumerable<BagsListViewModel> GetBagsChildren();
     }
 }

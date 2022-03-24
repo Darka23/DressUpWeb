@@ -29,5 +29,44 @@ namespace DressUp.Core.Services
                     Price = b.Price
                 });
         }
+
+        public IEnumerable<BagsListViewModel> GetBagsChildren()
+        {
+            return repo.All<Bag>()
+                .Where(b=>b.Category == "Деца")
+                .Select(b => new BagsListViewModel()
+                {
+                    Id = b.Id,
+                    Name = b.Name,
+                    ImageUrl = b.ImageUrl,
+                    Price = b.Price
+                });
+        }
+
+        public IEnumerable<BagsListViewModel> GetBagsMen()
+        {
+            return repo.All<Bag>()
+                .Where(b => b.Category == "Мъже")
+                .Select(b => new BagsListViewModel()
+                {
+                    Id = b.Id,
+                    Name = b.Name,
+                    ImageUrl = b.ImageUrl,
+                    Price = b.Price
+                });
+        }
+
+        public IEnumerable<BagsListViewModel> GetBagsWomen()
+        {
+            return repo.All<Bag>()
+                .Where(b => b.Category == "Жени")
+                .Select(b => new BagsListViewModel()
+                {
+                    Id = b.Id,
+                    Name = b.Name,
+                    ImageUrl = b.ImageUrl,
+                    Price = b.Price
+                });
+        }
     }
 }

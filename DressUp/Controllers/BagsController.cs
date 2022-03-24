@@ -22,6 +22,43 @@ namespace DressUp.Controllers
 
             return View(model);
         }
+
+        public IActionResult BagsMen()
+        {
+            var bags = bagsServices.GetBagsMen();
+
+            var model = new
+            {
+                Bags = bags
+            };
+
+            return View(model);
+        }
+
+        public IActionResult BagsWomen()
+        {
+            var bags = bagsServices.GetBagsWomen();
+
+            var model = new
+            {
+                Bags = bags
+            };
+
+            return View(model);
+        }
+
+        public IActionResult BagsChildren()
+        {
+            var bags = bagsServices.GetBagsChildren();
+
+            var model = new
+            {
+                Bags = bags
+            };
+
+            return View(model);
+        }
+
         public IActionResult Details()
         {
             return View();

@@ -44,6 +44,8 @@ namespace DressUp.Core.Services
                 Description = model.Description,
                 Color = model.Color,
                 Material = model.Material,
+                Category = model.Category,
+                Condition = model.Condition,
             });
 
             repo.SaveChanges();
@@ -63,7 +65,8 @@ namespace DressUp.Core.Services
                 Name = model.Name,
                 Price = model.Price,
                 Size = model.Size,
-                ImageUrl = imageUrl
+                ImageUrl = imageUrl,
+                Condition = model.Condition,
             });
 
             repo.SaveChanges();
@@ -79,6 +82,8 @@ namespace DressUp.Core.Services
                 Price = model.Price,
                 Description = model.Description,
                 Size = model.Size,
+                Category = model.Category,
+                Condition = model.Condition,
             });
 
             repo.SaveChanges();
