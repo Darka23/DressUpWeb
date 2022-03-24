@@ -79,13 +79,41 @@ namespace DressUp.Controllers
 
             return View();
         }
+
+        [HttpPost]
+        public IActionResult AddBags(BagsViewModel model)
+        {
+            adminServices.AddBags(model);
+
+            return Redirect("/Admin/AdminPanel");
+        }
+
+
         public IActionResult AddAccessories()
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult AddAccessories(AccessoriesViewModel model)
+        {
+            adminServices.AddAccessories(model);
+
+            return Redirect("/Admin/AdminPanel");
+        }
+
+
         public IActionResult AddShoes()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddShoes(ShoesViewModel model)
+        {
+            adminServices.AddShoes(model);
+
+            return Redirect("/Admin/AdminPanel");
         }
     }
 }

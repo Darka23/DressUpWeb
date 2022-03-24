@@ -15,6 +15,7 @@ namespace Microsoft.Extensions.DependencyInjection
         {         
             services.AddScoped<IApplicationDbRepository, ApplicationDbRepository>();
             services.AddScoped<IAdminServices, AdminServices>();          
+            services.AddScoped<IClothesServices, ClothesServices>();
 
             return services;
         }
