@@ -44,5 +44,30 @@ namespace DressUp.Core.Services
                     Price = c.Price
                 });
         }
+
+        public IEnumerable<ClothesListViewModel> GetChildrenClothes()
+        {
+            return repo.All<Cloth>()
+                .Where(c => c.Category == "Деца")
+                .Select(c => new ClothesListViewModel()
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    ImageUrl = c.ImageUrl,
+                    Price = c.Price
+                });
+        }
+
+        public IEnumerable<ClothesListViewModel> GetAllClothes()
+        {
+            return repo.All<Cloth>()
+                .Select(c => new ClothesListViewModel()
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    ImageUrl = c.ImageUrl,
+                    Price = c.Price
+                });
+        }
     }
 }

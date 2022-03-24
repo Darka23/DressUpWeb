@@ -26,12 +26,39 @@ namespace DressUp.Controllers
 
         public IActionResult ClothesWomen()
         {
-            return View();
+            var clothes = clothesServices.GetWomenClothes();
+
+            var model = new
+            {
+                Clothes = clothes
+            };
+
+            return View(model);
         }
         public IActionResult ClothesChildren()
         {
-            return View();
-        }        
+            var clothes = clothesServices.GetChildrenClothes();
+
+            var model = new
+            {
+                Clothes = clothes
+            };
+
+            return View(model);
+        }
+
+        public IActionResult ClothesAll()
+        {
+            var clothes = clothesServices.GetAllClothes();
+
+            var model = new
+            {
+                Clothes = clothes
+            };
+
+            return View(model);
+        }
+
         public IActionResult Details()
         {
             return View();

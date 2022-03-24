@@ -11,6 +11,9 @@ namespace DressUp.Core.Contracts
     {
         IEnumerable<ClothesListViewModel> GetMenClothes();
         IEnumerable<ClothesListViewModel> GetWomenClothes();
+        IEnumerable<ClothesListViewModel> GetChildrenClothes();
+        IEnumerable<ClothesListViewModel> GetAllClothes();
+
 
     }
 }
