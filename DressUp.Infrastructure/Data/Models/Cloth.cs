@@ -33,8 +33,12 @@ namespace DressUp.Infrastructure.Data.Models
         public string Color { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(5)]
         public string Category { get; set; }
+
+        [Required]
+        [StringLength(30)]
+        public string Condition { get; set; }
 
         [Required]
         [StringLength(30)]

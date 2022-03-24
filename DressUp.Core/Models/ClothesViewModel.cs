@@ -27,6 +27,9 @@ namespace DressUp.Core.Models
         public string Color { get; set; }
 
         [Required]
+        public string Condition { get; set; }
+
+        [Required]
         public string Category { get; set; }
 
         [Required]

@@ -20,6 +20,14 @@ namespace DressUp.Infrastructure.Data.Models
         public decimal Price { get; set; }
 
         [Required]
+        [StringLength(5)]
+        public string Category { get; set; }
+
+        [Required]
+        [StringLength(30)]
+        public string Condition { get; set; }
+
+        [Required]
         [StringLength(30)]
         public string Material { get; set; }
 
