@@ -17,14 +17,14 @@ namespace DressUp.Controllers
             return View();
         }
 
-        public async Task<IActionResult> CreateRole()
-        {
-            await roleManager.CreateAsync(new IdentityRole()
-            { 
-                Name = "Administrator" 
-            });
+        //public async Task<IActionResult> CreateRole()
+        //{
+        //    await roleManager.CreateAsync(new IdentityRole()
+        //    { 
+        //        Name = "Administrator" 
+        //    });
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
     }
 }

@@ -84,6 +84,18 @@ namespace DressUp.Controllers
             return View(model);
         }
 
+        public IActionResult Earrings()
+        {
+            var earrings = accessoriesServices.GetAllEarrings();
+
+            var model = new
+            {
+                Earrings = earrings
+            };
+
+            return View(model);
+        }
+
         public IActionResult Details()
         {
             return View();

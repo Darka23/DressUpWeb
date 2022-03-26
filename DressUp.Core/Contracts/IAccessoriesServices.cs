@@ -15,5 +15,6 @@ namespace DressUp.Core.Contracts
         IEnumerable<AccessoriesListViewModel> GetAllBracelets();
         IEnumerable<AccessoriesListViewModel> GetAllKeychains();
         IEnumerable<AccessoriesListViewModel> GetAllRings();
+        IEnumerable<AccessoriesListViewModel> GetAllEarrings();
     }
 }

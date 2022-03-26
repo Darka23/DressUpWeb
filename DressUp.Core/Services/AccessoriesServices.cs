@@ -44,6 +44,19 @@ namespace DressUp.Core.Services
                 });
         }
 
+        public IEnumerable<AccessoriesListViewModel> GetAllEarrings()
+        {
+            return repo.All<Accessory>()
+                .Where(a => a.AccessoryType == "Обеци")
+                .Select(a => new AccessoriesListViewModel()
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    ImageUrl = a.ImageUrl,
+                    Price = a.Price
+                });
+        }
+
         public IEnumerable<AccessoriesListViewModel> GetAllKeychains()
         {
             return repo.All<Accessory>()

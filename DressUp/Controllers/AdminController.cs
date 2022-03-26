@@ -4,20 +4,20 @@ using DressUp.Infrastructure.Data.Common;
 using DressUp.Infrastructure.Data.Models;
 using DressUp.Infrastructure.Data.Repositories;
 using DressUp.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace DressUp.Controllers
 {
+    [Authorize(Roles = ("Administrator"))]
     public class AdminController : BaseController
     {
         private readonly IAdminServices adminServices;
-        private readonly IApplicationDbRepository repo;
 
         public AdminController(IAdminServices _adminServices, IApplicationDbRepository _repo)
         {
             adminServices = _adminServices;
-            repo = _repo;
         }
 
         public IActionResult AdminPanel()
