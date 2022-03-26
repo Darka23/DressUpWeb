@@ -1,4 +1,4 @@
-﻿namespace DressUp.Core.Models
+﻿namespace DressUp.Core.Models.AddViewModels
 {
     public class MaterialViewModel
     {

@@ -59,7 +59,7 @@ namespace DressUp.Controllers
             return View(model);
         }
 
-        public IActionResult Details()
+        public IActionResult Details(string id)
         {
             return View();
         }

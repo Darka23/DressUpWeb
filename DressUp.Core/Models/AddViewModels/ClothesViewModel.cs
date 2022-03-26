@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DressUp.Core.Models
+namespace DressUp.Core.Models.AddViewModels
 {
     public class ClothesViewModel
     {

@@ -1,4 +1,5 @@
 ﻿using DressUp.Core.Models;
+using DressUp.Core.Models.AddViewModels;
 using DressUp.Infrastructure.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 

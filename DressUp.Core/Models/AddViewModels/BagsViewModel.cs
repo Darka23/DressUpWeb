@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DressUp.Core.Models
+namespace DressUp.Core.Models.AddViewModels
 {
-    public class ShoesViewModel
+    public class BagsViewModel
     {
         public string Name { get; set; }
 
@@ -21,6 +21,9 @@ namespace DressUp.Core.Models
 
         public decimal Price { get; set; }
 
-        public string Size { get; set; }
+        public string Material { get; set; }
+
+        public string Color { get; set; }
+
     }
 }

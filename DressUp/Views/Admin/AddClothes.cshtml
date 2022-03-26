@@ -1,4 +1,4 @@
-﻿@model DressUp.Core.Models.ClothesViewModel
+﻿@model DressUp.Core.Models.AddViewModels.ClothesViewModel
 
 @{
     ViewData["Title"] = "Add Clothes";
@@ -39,6 +39,7 @@
                      <option value="L">L</option>                  
                      <option value="XL">XL</option>                  
                      <option value="XXL">XXL</option>                  
+                     <option value="В описанието">В описанието</option>                  
                 </select>
                 <span asp-validation-for="Size" class="text-danger"></span>
             </div>
