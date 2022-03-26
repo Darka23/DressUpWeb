@@ -27,6 +27,17 @@
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="AccessoryType">Choose an accessory type:</label>
+                <select asp-for="AccessoryType">
+                    <option value="Часовник">Часовник</option>
+                    <option value="Колие">Колие</option>
+                    <option value="Гривна">Гривна</option>
+                    <option value="Ключодържател">Ключодържател</option>
+                    <option value="Пръстен">Пръстен</option>
+                </select>
+                <span asp-validation-for="AccessoryType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
                 <textarea asp-for="Description" class="form-control" ></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>

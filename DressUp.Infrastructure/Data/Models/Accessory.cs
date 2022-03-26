@@ -19,6 +19,10 @@ namespace DressUp.Infrastructure.Data.Models
         [Column(TypeName = "money")]
         public decimal Price { get; set; }
 
+        [Required]
+        [StringLength(20)]
+        public string AccessoryType { get; set; }
+
         [StringLength(250)]
         public string Description { get; set; }
     }

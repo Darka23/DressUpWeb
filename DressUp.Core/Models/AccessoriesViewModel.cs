@@ -14,6 +14,8 @@ namespace DressUp.Core.Models
 
         public IFormFile Image { get; set; }
 
+        public string AccessoryType { get; set; }
+
         public string Description { get; set; }
 
         public decimal Price { get; set; }

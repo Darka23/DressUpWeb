@@ -43,8 +43,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3JpZXNcQWNjZXNzb3JpZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/DressUpGit/DressUpWeb/DressUp/Views/Accessories/Bracelets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3JpZXNcQnJhY2VsZXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/DressUpGit/DressUpWeb/DressUp/Views/Accessories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3JpZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DressUpGit/DressUpWeb/DressUp/Views/Accessories/Keychains.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3JpZXNcS2V5Y2hhaW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DressUpGit/DressUpWeb/DressUp/Views/Accessories/Necklaces.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3JpZXNcTmVja2xhY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DressUpGit/DressUpWeb/DressUp/Views/Accessories/Rings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3JpZXNcUmluZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/DressUpGit/DressUpWeb/DressUp/Views/Accessories/Watches.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzb3JpZXNcV2F0Y2hlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/DressUpGit/DressUpWeb/DressUp/Views/Admin/AddAccessories.cshtml]
