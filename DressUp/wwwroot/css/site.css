@@ -13,6 +13,12 @@ html {
   min-height: 100%;
 }
 
+.sub_div {
+    position: absolute;
+    left:16px;
+    bottom: 16px;
+}
+
 .pic {
     width: 500px;
 }

@@ -11,6 +11,7 @@
 
     /* The container <div> - needed to position the dropdown content */
     .dropdown {
+        
         position: relative;
         display: block;
     }
@@ -54,7 +55,7 @@
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
 
-        @*<li class="nav-item">
+       @* <li class="nav-item">
             <a href="/Clothes/ClothesMen" class="nav-link">
             <i class="fa-solid fa-person fa-xl"></i>
             <p class="list-item-names">&nbsp;Мъже</p>
@@ -75,9 +76,9 @@
 
         <li class="nav-item">
             <div class="dropdown">
-                <button onclick="location.href='/Clothes/ClothesAll'" class="btn btn-block btn-outline-primary btn-lg">
-                    Дрехи
-                    <i class="fa-solid fa-person"></i>
+                <button onclick="location.href='/Clothes/ClothesAll'" class="btn btn-block btn-outline-primary btn-lg" >
+                    <i class="fa-solid fa-shirt fa-lg"></i>
+                    <a >&nbsp Дрехи</a>
                 </button>
                 <div class="dropdown-content">
                     <a href="/Clothes/ClothesMen" class="nav-link">
@@ -96,8 +97,8 @@
         <li class="nav-item">
             <div class="dropdown">
                 <button onclick="location.href='/Shoes/Shoes'" class="btn btn-block btn-outline-primary btn-lg">
-                    Обувки
                     <i class="fa-solid fa-shoe-prints fa-lg"></i>
+                    <a>&nbsp Обувки</a>
                 </button>
                 <div class="dropdown-content">
                     <a href="/Shoes/ShoesMen" class="nav-link">
@@ -116,8 +117,8 @@
         <li class="nav-item">
             <div class="dropdown">
                 <button onclick="location.href='/Bags/Bags'" class="btn btn-block btn-outline-primary btn-lg">
-                    Чанти и раници
                    <i class="fa-solid fa-bag-shopping fa-lg"></i>
+                    <a>&nbsp Чанти и раници</a>
                 </button>
                 <div class="dropdown-content">
                     <a href="/Bags/BagsMen" class="nav-link">
@@ -136,8 +137,8 @@
         <li class="nav-item">
             <div class="dropdown">
                 <button onclick="location.href='/Accessories/Accessories'" class="btn btn-block btn-outline-primary btn-lg">
-                    Аксесоари
                     <i class="fa-solid fa-ring fa-lg"></i>
+                    <a>&nbsp Аксесоари</a>
                 </button>
                 <div class="dropdown-content">
                     <a href="/Accessories/Watches" class="nav-link">
