@@ -4,6 +4,9 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
+
+
+
 h4, h5, h6,
 h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;}
@@ -1901,10 +1904,10 @@ i.pin {
 p.f_text, p.email{
 	font-size: 0.8125em;
 }
-.etalage_zoom_area div {
+/*.etalage_zoom_area div {
     width:350px !important;
     height:350px !important;
-}
+}*/
 .span_2_of_a1 {
 	width: 50.1%;
 	margin-left: 4em;
@@ -2104,10 +2107,10 @@ p.cart_desc {
 	width: 100%;
 	margin-left: 0;
 }
-.etalage_zoom_area div {
+/*.etalage_zoom_area div {
     width:250px !important;
     height:250px !important;
-}
+}*/
 }
 @media (max-width:480px){
 .wmuSliderPrev {
@@ -2172,10 +2175,10 @@ i.pin {
 .apparel_box {
 	width: 41%;
 }
-.etalage_zoom_area div {
+/*.etalage_zoom_area div {
     width:100px !important;
     height:100px !important;
-}
+}*/
 .mens-toolbar .sort {
 	width: 34.5%;
 }

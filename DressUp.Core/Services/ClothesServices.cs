@@ -1,4 +1,5 @@
 ﻿using DressUp.Core.Contracts;
+using DressUp.Core.Models.DetailsViewModels;
 using DressUp.Core.Models.ListViewModels;
 using DressUp.Infrastructure.Data.Models;
 using DressUp.Infrastructure.Data.Repositories;
@@ -68,6 +69,27 @@ namespace DressUp.Core.Services
                     ImageUrl = c.ImageUrl,
                     Price = c.Price
                 });
+        }
+
+        public ClothesDetailsViewModel? GetClothesById(int id)
+        {
+            return repo.All<Cloth>()
+                .Where(c => c.Id == id)
+                .Select(c => new ClothesDetailsViewModel()
+                {
+                    Id = id,
+                    Category = c.Category,
+                    Color = c.Color,
+                    Condition = c.Condition,
+                    Description = c.Description,
+                    ImageUrl = c.ImageUrl,
+                    Material = c.Material,
+                    Name = c.Name,
+                    Price = c.Price,
+                    Size = c.Size,
+                })
+                .FirstOrDefault();
+                      
         }
     }
 }

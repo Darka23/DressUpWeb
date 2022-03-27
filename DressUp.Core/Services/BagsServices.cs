@@ -1,4 +1,5 @@
 ﻿using DressUp.Core.Contracts;
+using DressUp.Core.Models.DetailsViewModels;
 using DressUp.Core.Models.ListViewModels;
 using DressUp.Infrastructure.Data.Models;
 using DressUp.Infrastructure.Data.Repositories;
@@ -29,6 +30,7 @@ namespace DressUp.Core.Services
                     Price = b.Price
                 });
         }
+
 
         public IEnumerable<BagsListViewModel> GetBagsChildren()
         {
@@ -67,6 +69,25 @@ namespace DressUp.Core.Services
                     ImageUrl = b.ImageUrl,
                     Price = b.Price
                 });
+        }
+
+        public BagsDetailsViewModel? GetBagsById(int id)
+        {
+            return repo.All<Bag>()
+                .Where(b=> b.Id == id)
+                .Select(b => new BagsDetailsViewModel()
+                {
+                   Name = b.Name,
+                   Id = b.Id,
+                   Category = b.Category,
+                   Color = b.Color,
+                   Condition = b.Condition,
+                   Description = b.Description,
+                   ImageUrl = b.ImageUrl,
+                   Material = b.Material,
+                   Price = b.Price
+                })
+                .FirstOrDefault();
         }
     }
 }

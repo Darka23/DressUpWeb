@@ -1,4 +1,5 @@
-﻿using DressUp.Core.Models.ListViewModels;
+﻿using DressUp.Core.Models.DetailsViewModels;
+using DressUp.Core.Models.ListViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,7 @@ namespace DressUp.Core.Contracts
         IEnumerable<ShoesListViewModel> GetShoesMen();
         IEnumerable<ShoesListViewModel> GetShoesWomen();
         IEnumerable<ShoesListViewModel> GetShoesChildren();
+
+        ShoesDetailsViewModel? GetShoesById(int id);
     }
 }

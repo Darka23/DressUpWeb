@@ -96,9 +96,10 @@ namespace DressUp.Controllers
             return View(model);
         }
 
-        public IActionResult Details()
+        public IActionResult Details(int id)
         {
-            return View();
+            var model = accessoriesServices.GetAccessoryById(id);
+            return View(model);
         }
     }
 }

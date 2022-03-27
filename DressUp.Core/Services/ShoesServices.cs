@@ -1,4 +1,5 @@
 ﻿using DressUp.Core.Contracts;
+using DressUp.Core.Models.DetailsViewModels;
 using DressUp.Core.Models.ListViewModels;
 using DressUp.Infrastructure.Data.Models;
 using DressUp.Infrastructure.Data.Repositories;
@@ -30,6 +31,7 @@ namespace DressUp.Core.Services
                     Price = s.Price
                 });
         }
+
 
         public IEnumerable<ShoesListViewModel> GetShoesChildren()
         {
@@ -68,6 +70,24 @@ namespace DressUp.Core.Services
                     ImageUrl = s.ImageUrl,
                     Price = s.Price
                 });
+        }
+
+        public ShoesDetailsViewModel? GetShoesById(int id)
+        {
+            return repo.All<Shoe>()
+                .Where(s => s.Id == id)
+                .Select(s => new ShoesDetailsViewModel()
+                {
+                    Name = s.Name,
+                    Id = s.Id,
+                    Category = s.Category,
+                    Condition = s.Condition,
+                    Description = s.Description,
+                    ImageUrl = s.ImageUrl,
+                    Price = s.Price,
+                    Size = s.Size,                   
+                })
+                .FirstOrDefault();
         }
     }
 }

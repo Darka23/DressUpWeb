@@ -28,6 +28,7 @@ namespace DressUp.Core.Services
                 Name = model.Name,
                 Price = model.Price,
                 Description = model.Description,
+                AccessoryType = model.AccessoryType,
             });
 
             repo.SaveChanges();

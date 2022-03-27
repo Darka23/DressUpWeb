@@ -1,4 +1,5 @@
-﻿using DressUp.Core.Models.ListViewModels;
+﻿using DressUp.Core.Models.DetailsViewModels;
+using DressUp.Core.Models.ListViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,6 @@ namespace DressUp.Core.Contracts
         IEnumerable<AccessoriesListViewModel> GetAllKeychains();
         IEnumerable<AccessoriesListViewModel> GetAllRings();
         IEnumerable<AccessoriesListViewModel> GetAllEarrings();
+        AccessoriesDetailsViewModel GetAccessoryById(int id);
     }
 }

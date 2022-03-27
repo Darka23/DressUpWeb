@@ -59,9 +59,10 @@ namespace DressUp.Controllers
             return View(model);
         }
 
-        public IActionResult Details(string id)
+        public IActionResult Details(int id)
         {
-            return View();
+            var model = clothesServices.GetClothesById(id);
+            return View(model);
         }
     }
 }

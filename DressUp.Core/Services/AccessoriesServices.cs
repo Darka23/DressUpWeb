@@ -1,4 +1,5 @@
 ﻿using DressUp.Core.Contracts;
+using DressUp.Core.Models.DetailsViewModels;
 using DressUp.Core.Models.ListViewModels;
 using DressUp.Infrastructure.Data.Models;
 using DressUp.Infrastructure.Data.Repositories;
@@ -107,6 +108,21 @@ namespace DressUp.Core.Services
                     ImageUrl = a.ImageUrl,
                     Price = a.Price
                 });
+        }
+
+        public AccessoriesDetailsViewModel? GetAccessoryById(int id)
+        {
+            return repo.All<Accessory>()
+                .Where(a => a.Id == id)
+                .Select(a => new AccessoriesDetailsViewModel()
+                {
+                    Name = a.Name,
+                    Id = a.Id,
+                    Description = a.Description,
+                    ImageUrl = a.ImageUrl,
+                    Price = a.Price,                
+                })
+                .FirstOrDefault();
         }
     }
 }

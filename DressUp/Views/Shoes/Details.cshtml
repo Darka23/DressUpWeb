@@ -1,26 +1,25 @@
 ﻿<link rel="stylesheet" href="~/css/css/style.css"/>
+<link rel="stylesheet" href="~/css/site.css"/>
+@using DressUp.Core.Models.DetailsViewModels
+@model ShoesDetailsViewModel
 
 
 <div class="singel_right">
     <div class="labout span_1_of_a1">
 
-        <ul id="etalage">
-            <img src="/css/img/shop-1.jpg"/>
-        </ul>
+            <img class="pic" src="@Model.ImageUrl"/>
 
     </div>
     <div class="cont1 span_2_of_a1">
-        <h1>ProductName...</h1>
+        <h1>@Model.Name</h1>
         <div class="price_single">
-            <span class="actual">ProductPrice...</span>
+            <span class="actual">@Math.Round(Model.Price,2)лв.</span>
         </div>
-        <p class="quick_desc">Description...</p>
+        <p class="quick_desc">Описание: @Model.Description</p>
+      
+        <h3>Размер: @Model.Size</h3> 
 
-        <h3>Material...</h3>
-
-        <h3>Size...</h3> 
-        
-        <h3>Color...</h3> 
+        <h3>Състояние: @Model.Condition</h3> 
         
         <div class="btn_form">
             <form>
