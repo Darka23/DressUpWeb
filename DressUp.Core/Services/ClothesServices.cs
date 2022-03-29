@@ -91,5 +91,16 @@ namespace DressUp.Core.Services
                 .FirstOrDefault();
                       
         }
+
+        public void DeleteClothes(int id)
+        {
+            var clothing = repo.All<Cloth>()
+                .Where(x => x.Id == id)
+                .First();
+
+            repo.Delete(clothing);
+
+            repo.SaveChanges();
+        }
     }
 }

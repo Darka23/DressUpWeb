@@ -15,6 +15,7 @@ namespace DressUp.Core.Contracts
         IEnumerable<ClothesListViewModel> GetChildrenClothes();
         IEnumerable<ClothesListViewModel> GetAllClothes();
         ClothesDetailsViewModel? GetClothesById(int id);
+        void DeleteClothes(int id);
 
 
     }

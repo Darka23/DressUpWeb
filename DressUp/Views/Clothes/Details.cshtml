@@ -2,13 +2,17 @@
 @model ClothesDetailsViewModel
 
 
-<link rel="stylesheet" href="~/css/css/style.css"/>
-<link rel="stylesheet" href="~/css/site.css"/>
+<link rel="stylesheet" href="~/css/css/style.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+
+<style>
+    
+</style>
 
 <div class="singel_right">
     <div class="labout span_1_of_a1">
 
-            <img class = "pic" src="@(Model.ImageUrl)"/>
+        <img class="pic" src="@Model.ImageUrl" />
 
     </div>
     <div class="cont1 span_2_of_a1">
@@ -20,17 +24,27 @@
 
         <h3>Материя: @Model.Material</h3>
 
-        <h3>Размер: @Model.Size</h3> 
-        
-        <h3>Цвят: @Model.Color</h3> 
+        <h3>Размер: @Model.Size</h3>
 
-        <h3>Състояние: @Model.Condition</h3> 
-        
+        <h3>Цвят: @Model.Color</h3>
+
+        <h3>Състояние: @Model.Condition</h3>
+
         <div class="btn_form">
             <form>
                 <input type="submit" value="Add to Cart" title="">
             </form>
+
+            @if (User.IsInRole("Administrator"))
+            {
+                <form>
+                    <a id = "deleteButton" href="/Clothes/Delete?id=@Model.Id" class="btn btn-block btn-danger">
+                        Delete
+                    </a>
+                </form>
+            }
         </div>
+
     </div>
     <div class="clearfix"></div>
 </div>

@@ -23,6 +23,11 @@ html {
     width: 500px;
 }
 
+#deleteButton {
+    margin-top: 10px;
+    width: 100px;
+}
+
 .center {
     display: flex;
     justify-content: center;

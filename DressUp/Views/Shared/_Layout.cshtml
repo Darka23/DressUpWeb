@@ -29,13 +29,17 @@
                 </li>
                 @if (User.IsInRole("Administrator"))
                 {
-                                <a class="nav-link btn btn-link text-dark" href="/Admin/AdminPanel" role="button">
-                                    <i class="fa-solid fa-toolbox"></i>
-                                    &nbsp; Administration Panel
-                                </a>
+                    <a class="nav-link btn btn-link text-dark" href="/Admin/AdminPanel" role="button">
+                        <i class="fa-solid fa-toolbox"></i>
+                        &nbsp; Administration Panel
+                    </a>
                 }
-                <a class="nav-link btn btn-link text-dark" href="/Home/SizeTable" role="button">
+                @*<a class="nav-link btn btn-link text-dark" href="/Home/SizeTable" role="button">
                     &nbsp; Таблица с размери
+                </a>*@
+
+                <a class = "nav-link btn btn-link text-dark" href="" role="button">
+                    <i class="fa-solid fa-cart-shopping"></i>
                 </a>
             </ul>
 
@@ -64,8 +68,9 @@
                 </li>
                 <li class="nav-item">
                     <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                        <button type="submit" class="nav-link btn btn-link text-dark">Излез
-                        <i class="fas fa-door-open"></i>
+                        <button type="submit" class="nav-link btn btn-link text-dark">
+                            Излез
+                            <i class="fas fa-door-open"></i>
                         </button>
                     </form>
                 </li>
