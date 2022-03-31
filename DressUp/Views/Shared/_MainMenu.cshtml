@@ -1,61 +1,12 @@
-﻿<style>
+﻿<link rel="stylesheet" href="~/css/css/adminlte.css" />
 
-    /* Dropdown Button */
-    .dropbtn {
-        background-color: #04AA6D;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-    }
-
-    /* The container <div> - needed to position the dropdown content */
-    .dropdown {
-        
-        position: relative;
-        display: block;
-    }
-
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-        display: none;
-        position: relative;
-        background-color: GrayText;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-        /* Links inside the dropdown */
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-            /* Change color of dropdown links on hover */
-            .dropdown-content a:hover {
-                background-color: #ddd;
-            }
-
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    /* Change the background color of the dropdown button when the dropdown content is shown */
-    .dropdown:hover .dropbtn {
-        background-color: red;
-    }
-</style>
 
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
 
-       @* <li class="nav-item">
+        @* <li class="nav-item">
             <a href="/Clothes/ClothesMen" class="nav-link">
             <i class="fa-solid fa-person fa-xl"></i>
             <p class="list-item-names">&nbsp;Мъже</p>
@@ -74,93 +25,166 @@
             </a>
             </li>*@
 
-        <li class="nav-item">
+        @*<li class="nav-item">
             <div class="dropdown">
-                <button onclick="location.href='/Clothes/ClothesAll'" class="btn btn-block btn-outline-primary btn-lg" >
-                    <i class="fa-solid fa-shirt fa-lg"></i>
-                    <a >&nbsp Дрехи</a>
-                </button>
-                <div class="dropdown-content">
+            <button onclick="location.href='/Clothes/ClothesAll'" class="btn btn-block btn-outline-primary btn-lg" >
+            <i class="fa-solid fa-shirt fa-lg"></i>
+            <a >&nbsp Дрехи</a>
+            </button>
+            <div class="dropdown-content">
+            <a href="/Clothes/ClothesMen" class="nav-link">
+            <p class="list-item-names">&nbsp;За Мъже</p>
+            </a>
+            <a href="/Clothes/ClothesWomen" class="nav-link">
+            <p class="list-item-names">&nbsp;За Жени</p>
+            </a>
+            <a href="/Clothes/ClothesChildren" class="nav-link">
+            <p class="list-item-names">&nbsp;За Деца</p>
+            </a>
+            </div>
+            </div>
+            </li>*@
+
+        <li class="nav-item">
+            <a href="#" class="nav-link">
+                <i class="fa-solid fa-shirt fa-lg">                    
+                </i>
+                <p>
+                    Дрехи
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview" style="display:none;">
+                <li class="nav-item">
                     <a href="/Clothes/ClothesMen" class="nav-link">
-                        <p class="list-item-names">&nbsp;За Мъже</p>
+                        <p>За Мъже</p>
                     </a>
+                </li>
+                <li class="nav-item">
                     <a href="/Clothes/ClothesWomen" class="nav-link">
-                        <p class="list-item-names">&nbsp;За Жени</p>
+                        <p>За Жени</p>
                     </a>
+                </li>
+                <li class="nav-item">
                     <a href="/Clothes/ClothesChildren" class="nav-link">
-                        <p class="list-item-names">&nbsp;За Деца</p>
+                        <p>За Деца</p>
                     </a>
-                </div>
-            </div>
+                </li>
+                <li class="nav-item">
+                    <a href="/Clothes/ClothesAll" class="nav-link">
+                        <p>Всички дрехи</p>
+                    </a>
+                </li>
+            </ul>
         </li>
         </br>
         <li class="nav-item">
-            <div class="dropdown">
-                <button onclick="location.href='/Shoes/Shoes'" class="btn btn-block btn-outline-primary btn-lg">
-                    <i class="fa-solid fa-shoe-prints fa-lg"></i>
-                    <a>&nbsp Обувки</a>
-                </button>
-                <div class="dropdown-content">
+            <a href="#" class="nav-link">
+                <i class="fa-solid fa-shoe-prints fa-lg">
+                </i>
+                <p>
+                    Обувки
+                    <i class="fas fa-angle-left right">
+                    </i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview" style="display:none;">
+                <li class="nav-item">
                     <a href="/Shoes/ShoesMen" class="nav-link">
-                        <p class="list-item-names">&nbsp;За Мъже</p>
+                        <p>За Мъже</p>
                     </a>
+                </li>
+                <li class="nav-item">
                     <a href="/Shoes/ShoesWomen" class="nav-link">
-                        <p class="list-item-names">&nbsp;За Жени</p>
+                        <p>За Жени</p>
                     </a>
+                </li>
+                <li class="nav-item">
                     <a href="/Shoes/ShoesChildren" class="nav-link">
-                        <p class="list-item-names">&nbsp;За Деца</p>
+                        <p>За Деца</p>
                     </a>
-                </div>
-            </div>
+                </li>
+                <li class="nav-item">
+                    <a href="/Shoes/Shoes" class="nav-link">
+                        <p>Всички обувки</p>
+                    </a>
+                </li>
+            </ul>
         </li>
+
         </br>
-        <li class="nav-item">
-            <div class="dropdown">
-                <button onclick="location.href='/Bags/Bags'" class="btn btn-block btn-outline-primary btn-lg">
-                   <i class="fa-solid fa-bag-shopping fa-lg"></i>
-                    <a>&nbsp Чанти и раници</a>
-                </button>
-                <div class="dropdown-content">
+
+        <li class= "nav-item">
+            <a href="#" class="nav-link">
+                <i class="fa-solid fa-bag-shopping fa-lg">
+                    </i>
+                <p>Чанти и раници
+                    <i class="fas fa-angle-left right">
+                        </i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview" style="display:none;">
+                <li class="nav-item">
                     <a href="/Bags/BagsMen" class="nav-link">
-                        <p class="list-item-names">&nbsp;За Мъже</p>
+                        <p>За Мъже</p>
                     </a>
+                </li>
+                <li class="nav-item">
                     <a href="/Bags/BagsWomen" class="nav-link">
-                        <p class="list-item-names">&nbsp;За Жени</p>
+                        <p>За Жени</p>
                     </a>
+                </li>
+                <li class="nav-item">
                     <a href="/Bags/BagsChildren" class="nav-link">
-                        <p class="list-item-names">&nbsp;За Деца</p>
+                        <p>За Деца</p>
                     </a>
-                </div>
-            </div>
+                </li>
+                <li class="nav-item">
+                    <a href="/Bags/Bags" class="nav-link">
+                        <p>Всички</p>
+                    </a>
+                </li>
+            </ul>
         </li>
-       </br>
-        <li class="nav-item">
-            <div class="dropdown">
-                <button onclick="location.href='/Accessories/Accessories'" class="btn btn-block btn-outline-primary btn-lg">
-                    <i class="fa-solid fa-ring fa-lg"></i>
-                    <a>&nbsp Аксесоари</a>
-                </button>
-                <div class="dropdown-content">
+        
+        </br>
+
+        <li class= "nav-item ">
+            <a href="#" class="nav-link">
+                <i class="fa-solid fa-ring fa-lg">
+                    </i>
+                <p>
+                    Аксесоари
+                    <i class="fas fa-angle-left right"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview" style="display:none;">
+                <li class="nav-item">
                     <a href="/Accessories/Watches" class="nav-link">
-                        <p class="list-item-names">&nbsp;Часовници</p>
+                        <p>Часовници</p>
                     </a>
+                </li>
+                <li class="nav-item">
                     <a href="/Accessories/Necklaces" class="nav-link">
-                        <p class="list-item-names">&nbsp;Колиета</p>
+                        <p>Колиета</p>
                     </a>
+                </li>
+                <li class="nav-item">
                     <a href="/Accessories/Bracelets" class="nav-link">
-                        <p class="list-item-names">&nbsp;Гривни</p>
+                        <p>Гривни</p>
                     </a>
-                    <a href="/Accessories/Rings" class="nav-link">
-                        <p class="list-item-names">&nbsp;Пръстени</p>
-                    </a>
-                    <a href="/Accessories/Keychains" class="nav-link">
-                        <p class="list-item-names">&nbsp;Ключодържатели</p>
-                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/Accessories/Earrings" class="nav-link">
-                        <p class="list-item-names">&nbsp;Обеци</p>
+                        <p>Обеци</p>
                     </a>
-                </div>
-            </div>
-        </li>        
+                </li>
+                <li class="nav-item">
+                    <a href="/Accessories/Keychains" class="nav-link">
+                        <p>Ключодържатели</p>
+                    </a>
+                </li>
+            </ul>
+        </li>       
     </ul>
 </nav>

@@ -22,7 +22,7 @@
         <h3>Състояние: @Model.Condition</h3> 
         
         <div class="btn_form">
-            <form>
+            <form action="@Url.Action("AddShoesToCart", "Cart")?id=@(Model.Id)" method="post">
                 <input type="submit" value="Add to Cart" title="">
             </form>
             @if (User.IsInRole("Administrator"))

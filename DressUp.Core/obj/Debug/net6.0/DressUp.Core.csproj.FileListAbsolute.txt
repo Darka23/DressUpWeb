@@ -15,7 +15,6 @@ E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\ref\DressUp.Core.dll
 E:\DressUp\DressUp\DressUp.Core\obj\Debug\net6.0\DressUp.Core.pdb
 E:\DressUpGit\DressUpWeb\DressUp.Core\bin\Debug\net6.0\DressUp.Core.deps.json
 E:\DressUpGit\DressUpWeb\DressUp.Core\bin\Debug\net6.0\DressUp.Core.dll
-E:\DressUpGit\DressUpWeb\DressUp.Core\bin\Debug\net6.0\ref\DressUp.Core.dll
 E:\DressUpGit\DressUpWeb\DressUp.Core\bin\Debug\net6.0\DressUp.Core.pdb
 E:\DressUpGit\DressUpWeb\DressUp.Core\bin\Debug\net6.0\DressUp.Infrastructure.dll
 E:\DressUpGit\DressUpWeb\DressUp.Core\bin\Debug\net6.0\DressUp.Infrastructure.pdb
@@ -28,3 +27,4 @@ E:\DressUpGit\DressUpWeb\DressUp.Core\obj\Debug\net6.0\DressUp.Core.csproj.CopyC
 E:\DressUpGit\DressUpWeb\DressUp.Core\obj\Debug\net6.0\DressUp.Core.dll
 E:\DressUpGit\DressUpWeb\DressUp.Core\obj\Debug\net6.0\ref\DressUp.Core.dll
 E:\DressUpGit\DressUpWeb\DressUp.Core\obj\Debug\net6.0\DressUp.Core.pdb
+E:\DressUpGit\DressUpWeb\DressUp.Core\obj\Debug\net6.0\refint\DressUp.Core.dll

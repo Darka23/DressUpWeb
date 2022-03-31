@@ -34,17 +34,6 @@
                         &nbsp; Administration Panel
                     </a>
                 }
-                @*<a class="nav-link btn btn-link text-dark" href="/Home/SizeTable" role="button">
-                    &nbsp; Таблица с размери
-                </a>*@
-
-                <a class = "nav-link btn btn-link text-dark" href="" role="button">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </a>
-            </ul>
-
-            <!-- Right navbar links -->
-            <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" data-widget="navbar-search" data-target="#main-header-search" href="#" role="button">
                         <i class="fas fa-search"></i>
@@ -66,6 +55,14 @@
                         </form>
                     </div>
                 </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                
+                <a class = "nav-link btn btn-link text-dark" href="/Cart/Cart" role="button">
+                    <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                </a>
                 <li class="nav-item">
                     <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
                         <button type="submit" class="nav-link btn btn-link text-dark">
@@ -74,11 +71,11 @@
                         </button>
                     </form>
                 </li>
-                <li class="nav-item">
+                @*<li class="nav-item">
                     <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                         <i class="fas fa-expand-arrows-alt"></i>
                     </a>
-                </li>
+                </li>*@
             </ul>
         </nav>
         <!-- /.navbar -->

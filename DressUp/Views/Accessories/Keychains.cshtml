@@ -17,11 +17,11 @@
                     <div class="col-lg-3 col-6 product-incfhny mt-4">
                         <div class="product-grid2 transmitv">
                             <div class="product-image2">
-                                <a href="/Clothes/Details">
+                                <a href="/Accessories/Details?id=@(item.Id)">
                                     <img class="pic-1 img-fluid" src="@item.ImageUrl">
                                 </a>
                                 <div class="transmitv single-item">
-                                    <form action="#" method="post">
+                                    <form action="@Url.Action("AddAccessoryToCart", "Cart")?id=@(item.Id)" method="post">
                                         <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
                                             Add to Cart
                                         </button>
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                             <div class="product-content">
-                                <h3 class="title"><a href="/Clothes/Details">@item.Name</a></h3>
+                                <h3 class="title"><a href="/Accessories/Details?id=@(item.Id)">@item.Name</a></h3>
                                 <span class="price">@Math.Round(item.Price,2)</span>
                             </div>
                         </div>

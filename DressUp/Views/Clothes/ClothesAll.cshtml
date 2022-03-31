@@ -35,7 +35,7 @@
                                     <img class="pic-1 img-fluid" src="@item.ImageUrl">
                                 </a>
                                 <div class="transmitv single-item">
-                                    <form action="#" method="post">
+                                    <form action="@Url.Action("AddClothToCart", "Cart")?id=@(item.Id)" method="post">
                                         <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
                                             Add to Cart
                                         </button>
@@ -50,7 +50,6 @@
                     </div>
                 }
             </div>
-
             <!-- //row-->
         </div>
     </div>

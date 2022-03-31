@@ -19,7 +19,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddScoped<IBagsServices, BagsServices>();
             services.AddScoped<IShoesServices, ShoesServices>();
             services.AddScoped<IAccessoriesServices, AccessoriesServices>();
-
+            services.AddScoped<ICartServices, CartServices>();
 
             return services;
         }
