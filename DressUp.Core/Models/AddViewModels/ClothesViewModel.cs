@@ -30,6 +30,9 @@ namespace DressUp.Core.Models.AddViewModels
         public string Condition { get; set; }
 
         [Required]
+        public string ClothingType { get; set; }
+
+        [Required]
         public string Category { get; set; }
 
         [Required]

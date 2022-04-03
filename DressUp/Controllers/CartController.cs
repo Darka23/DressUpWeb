@@ -1,7 +1,10 @@
-﻿using DressUp.Core.Contracts;
+﻿using DressUp.Core.Constants;
+using DressUp.Core.Contracts;
+using DressUp.Core.Models.CartModels;
 using DressUp.Infrastructure.Data.Models;
 using DressUp.Infrastructure.Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace DressUp.Controllers
 {
@@ -11,17 +14,20 @@ namespace DressUp.Controllers
 
         public CartController(ICartServices _cartServices)
         {
-            cartServices = _cartServices;         
+            cartServices = _cartServices;
         }
+
         public IActionResult Cart()
         {
-            return View();          
+            return View();
         }
 
         [HttpPost]
         public IActionResult AddClothToCart(int id)
         {
             var clothing = cartServices.AddClothToCart(id);
+
+            ViewData[MessageConstant.SuccessMessage] = "Успешно добавяне в количката!";
 
             return RedirectToAction("Cart");
         }

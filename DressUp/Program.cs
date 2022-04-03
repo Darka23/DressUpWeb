@@ -38,6 +38,11 @@ builder.Services.AddTransient<ICloudinaryService, CloudinaryService>();
 
 builder.Services.AddApplicationServices();
 
+builder.Services.AddSession(options =>
+{
+    options.Cookie.HttpOnly = true;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -59,6 +64,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseSession(); // moje da ne e tuk!!!
 
 app.MapControllerRoute(
     name: "default",

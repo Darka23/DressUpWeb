@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kSIT2q+EvoXjldBDaOVd/InoGApXRS3WhkyRtx1RZCA=",
+  "Hash": "q8zPdQMc6glMk7PwucO5vSn1ZQGRB7JBinG+YJUzlnA=",
   "Source": "DressUp",
   "BasePath": "_content/DressUp",
   "Mode": "Default",
@@ -3772,6 +3772,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\credit\\visa.png"
+    },
+    {
+      "Identity": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\img\\logo.png",
+      "SourceId": "DressUp",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\",
+      "BasePath": "_content/DressUp",
+      "RelativePath": "img/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logo.png"
+    },
+    {
+      "Identity": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\img\\logoBigger.png",
+      "SourceId": "DressUp",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\",
+      "BasePath": "_content/DressUp",
+      "RelativePath": "img/logoBigger.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\logoBigger.png"
     },
     {
       "Identity": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\img\\tablitsa-s-razmeri-za-damski-drehi.png",

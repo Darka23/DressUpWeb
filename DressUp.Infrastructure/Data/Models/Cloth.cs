@@ -38,6 +38,10 @@ namespace DressUp.Infrastructure.Data.Models
 
         [Required]
         [StringLength(30)]
+        public string ClothingType { get; set; }
+
+        [Required]
+        [StringLength(30)]
         public string Condition { get; set; }
 
         [Required]

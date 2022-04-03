@@ -69,9 +69,10 @@ namespace DressUp.Core.Services
                 Size = model.Size,
                 ImageUrl = imageUrl,
                 Condition = model.Condition,
+                ClothingType = model.ClothingType,
             });
 
-            repo.SaveChanges();
+             repo.SaveChanges();
         }
         public void AddShoes([FromForm] ShoesViewModel model)
         {

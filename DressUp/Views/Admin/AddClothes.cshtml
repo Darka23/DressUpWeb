@@ -44,6 +44,26 @@
                 <span asp-validation-for="Size" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="ClothingType">Choose clothing type:</label>
+                <select asp-for="ClothingType">
+                     <option value="Тениски">Тениски</option>                  
+                     <option value="Суичъри">Суичъри</option>  
+                     <option value="Якета">Якета</option>      
+                     <option value="Ризи">Ризи</option>                  
+                     <option value="Поли">Поли</option>                  
+                     <option value="Рокли">Рокли</option>                  
+                     <option value="Дънки">Дънки</option>                  
+                     <option value="Блузи">Блузи</option>                  
+                     <option value="Пуловери">Пуловери</option>     
+                     <option value="Панталони">Панталони</option>    
+                     <option value="Къси панталони">Къси панталони</option>    
+                     <option value="Спортни шорти">Спортни шорти</option>                  
+                     <option value="Спортни долнища">Спортни долнища</option>  
+                     <option value="Клинове">Клинове</option>                                         
+                </select>
+                <span asp-validation-for="ClothingType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Color">Choose a color:</label>
                 <select asp-for="Color">
                     @foreach (var color in colors)
