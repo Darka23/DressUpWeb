@@ -36,12 +36,13 @@ Cloudinary cloudinary = new Cloudinary(account);
 builder.Services.AddSingleton(cloudinary);
 builder.Services.AddTransient<ICloudinaryService, CloudinaryService>();
 
-builder.Services.AddApplicationServices();
-
 builder.Services.AddSession(options =>
 {
     options.Cookie.HttpOnly = true;
 });
+
+builder.Services.AddApplicationServices();
+
 
 var app = builder.Build();
 

@@ -1,10 +1,18 @@
-﻿<style>
-    .product-img{  
-        width:200px;
-        margin-right:-300px;    
+﻿@using DressUp.Core.Models.CartModels
+@model Cart
+
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<style>
+    .product-img {
+        width: 200px;
+        margin-right: -300px;
     }
-    th{
-        width:10%;
+
+    th {
+        width: 10%;
     }
 </style>
 
@@ -12,44 +20,45 @@
 <h1>Shopping Cart</h1>
 
 <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Product</th>
-      <th scope="col">Name</th>
-      <th scope="col">Price</th>
-      <th scope="col"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><img class="product-img" src="https://res.cloudinary.com/du3awsoi5/image/upload/v1648317731/DressUpImages/wxdkgh6skuufr052wgfl.jpg" /></td>
-      <td>Otto</td>
-      <td>md</td>
-      <td>
-      <a href=""> 
-          <i class="fa-solid fa-circle-xmark"></i>
-      </a>
-      </td>  
-    </tr>
-    <tr>
-      <td><img class="product-img" src="https://res.cloudinary.com/du3awsoi5/image/upload/v1648317731/DressUpImages/wxdkgh6skuufr052wgfl.jpg" /></td>
-      <td>Thornton</td>
-      <td>fat</td>
-      <td>
-      <a href=""> 
-          <i class="fa-solid fa-circle-xmark"></i>
-      </a>
-      </td>  
-    </tr>
-    <tr>
-      <td><img class="product-img" src="https://res.cloudinary.com/du3awsoi5/image/upload/v1648317731/DressUpImages/wxdkgh6skuufr052wgfl.jpg" /></td>
-      <td>the Bird</td>
-      <td>twit</td>
-      <td>
-      <a href=""> 
-          <i class="fa-solid fa-circle-xmark"></i>
-      </a>
-      </td>   
-    </tr>
-  </tbody>
+    <thead>
+        <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img class="product-img" src="https://res.cloudinary.com/du3awsoi5/image/upload/v1648317731/DressUpImages/wxdkgh6skuufr052wgfl.jpg" /></td>
+            <td>Otto</td>
+            <td>md</td>
+            <td>
+                <a href="">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td><img class="product-img" src="https://res.cloudinary.com/du3awsoi5/image/upload/v1648317731/DressUpImages/wxdkgh6skuufr052wgfl.jpg" /></td>
+            <td>Thornton</td>
+            <td>fat</td>
+            <td>
+                <a href="">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td><img class="product-img" src="https://res.cloudinary.com/du3awsoi5/image/upload/v1648317731/DressUpImages/wxdkgh6skuufr052wgfl.jpg" /></td>
+            <td>the Bird</td>
+            <td>twit</td>
+            <td>
+                <a href="">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
 </table>

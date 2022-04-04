@@ -17,16 +17,6 @@ namespace DressUp.Controllers
 
         public IActionResult Index()
         {
-            if (this.HttpContext.Session.Get("Cart") == null)
-            {
-                this.HttpContext.Session.SetString("Cart", JsonConvert.SerializeObject(new Cart()));
-            }
-
-            this.ViewData["Cart"] = this.HttpContext.Session.GetString("Cart") == null
-            ? null
-            : JsonConvert.DeserializeObject(this.HttpContext.Session.GetString("Cart"));
-
-            var a = JsonConvert.DeserializeObject(this.HttpContext.Session.GetString("Cart"));
             return View();
         }
 

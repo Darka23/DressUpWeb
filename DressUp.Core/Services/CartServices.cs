@@ -1,4 +1,5 @@
 ﻿using DressUp.Core.Contracts;
+using DressUp.Core.Models.CartModels;
 using DressUp.Infrastructure.Data.Models;
 using DressUp.Infrastructure.Data.Repositories;
 
