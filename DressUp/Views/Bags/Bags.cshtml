@@ -1,9 +1,13 @@
-﻿<link rel="stylesheet" href="~/css/css/style.css" />
+﻿    @using X.PagedList.Mvc.Core;
+@using X.PagedList;
+
+
 
 @{
     ViewData["Title"] = "Чанти и раници";
 }
 
+<link rel="stylesheet" href="~/css/css/style.css" />
 <title>@ViewData["Title"]</title>
 
 <section class="w3l-ecommerce-main">
@@ -12,7 +16,7 @@
             <!-- /row-->
 
             <div class="ecom-products-grids row mt-lg-5 mt-3">
-                @foreach (var item in Model.Bags)
+                @foreach (var item in Model)
                 {
                     <div class="col-lg-3 col-6 product-incfhny mt-4">
                         <div class="product-grid2 transmitv">
@@ -40,4 +44,21 @@
             <!-- //row-->
         </div>
     </div>
+
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Bags", new { page = page }),
+    new X.PagedList.Mvc.Common.PagedListRenderOptions
+    {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+    })
 </section>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+}

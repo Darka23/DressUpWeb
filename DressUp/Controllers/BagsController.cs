@@ -1,5 +1,6 @@
 ﻿using DressUp.Core.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList;
 
 namespace DressUp.Controllers
 {
@@ -11,52 +12,44 @@ namespace DressUp.Controllers
         {
             bagsServices = _bagsServices;
         }
-        public IActionResult Bags()
+        public IActionResult Bags(int? page)
         {
-            var bags = bagsServices.GetBags();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfBags = bagsServices.GetBags()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Bags = bags
-            };
-
-            return View(model);
+            return View(onePageOfBags);
         }
 
-        public IActionResult BagsMen()
+        public IActionResult BagsMen(int? page)
         {
-            var bags = bagsServices.GetBagsMen();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfBags = bagsServices.GetBagsMen()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Bags = bags
-            };
-
-            return View(model);
+            return View(onePageOfBags);
         }
 
-        public IActionResult BagsWomen()
+        public IActionResult BagsWomen(int? page)
         {
-            var bags = bagsServices.GetBagsWomen();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfBags = bagsServices.GetBagsWomen()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Bags = bags
-            };
-
-            return View(model);
+            return View(onePageOfBags);
         }
 
-        public IActionResult BagsChildren()
+        public IActionResult BagsChildren(int? page)
         {
-            var bags = bagsServices.GetBagsChildren();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfBags = bagsServices.GetBagsChildren()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Bags = bags
-            };
-
-            return View(model);
+            return View(onePageOfBags);
         }
 
         public IActionResult Details(int id)
