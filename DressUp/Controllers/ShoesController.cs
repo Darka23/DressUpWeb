@@ -1,5 +1,6 @@
 ﻿using DressUp.Core.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList;
 
 namespace DressUp.Controllers
 {
@@ -11,49 +12,41 @@ namespace DressUp.Controllers
         {
             shoesServices = _shoesServices;
         }
-        public IActionResult Shoes()
+        public IActionResult Shoes(int? page)
         {
-            var shoes = shoesServices.GetAllShoes();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfShoes = shoesServices.GetAllShoes()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Shoes = shoes
-            };
-
-            return View(model);
+            return View(onePageOfShoes);
         }
-        public IActionResult ShoesMen()
+        public IActionResult ShoesMen(int? page)
         {
-            var shoes = shoesServices.GetShoesMen();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfShoes = shoesServices.GetShoesMen()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Shoes = shoes
-            };
-
-            return View(model);
+            return View(onePageOfShoes);
         }
-        public IActionResult ShoesWomen()
+        public IActionResult ShoesWomen(int? page)
         {
-            var shoes = shoesServices.GetShoesWomen();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfShoes = shoesServices.GetShoesWomen()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Shoes = shoes
-            };
-
-            return View(model);
+            return View(onePageOfShoes);
         }
-        public IActionResult ShoesChildren()
+        public IActionResult ShoesChildren(int? page)
         {
-            var shoes = shoesServices.GetShoesChildren();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfShoes = shoesServices.GetShoesChildren()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Shoes = shoes
-            };
-
-            return View(model);
+            return View(onePageOfShoes);
         }
         public IActionResult Details(int id)
         {
