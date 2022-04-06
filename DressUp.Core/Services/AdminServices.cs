@@ -18,11 +18,20 @@ namespace DressUp.Core.Services
             cloudinaryService = _cloudinaryService;
         }
 
-        public void AddAccessories([FromForm]AccessoriesViewModel model)
+        public async Task AddAccessories([FromForm]AccessoriesViewModel model)
         {
+            var existing = repo.All<Accessory>()
+                .Where(a => a.Name == model.Name)
+                .FirstOrDefault();
+
+            if (existing != null)
+            {
+                throw new ArgumentException("Accessory exist");
+            }
+
             string imageUrl = cloudinaryService.Image(model.Image, "DressUpImages");
 
-            repo.AddAsync(new Accessory()
+            await repo.AddAsync(new Accessory()
             {
                 ImageUrl = imageUrl,
                 Name = model.Name,
@@ -31,14 +40,23 @@ namespace DressUp.Core.Services
                 AccessoryType = model.AccessoryType,
             });
 
-            repo.SaveChanges();
+            await repo.SaveChangesAsync();
         }
 
-        public void AddBags([FromForm] BagsViewModel model)
+        public async Task AddBags([FromForm] BagsViewModel model)
         {
+            var existing = repo.All<Bag>()
+                .Where(b => b.Name == model.Name)
+                .FirstOrDefault();
+
+            if (existing != null)
+            {
+                throw new ArgumentException("Bag exist");
+            }
+
             string imageUrl = cloudinaryService.Image(model.Image, "DressUpImages");
 
-            repo.AddAsync(new Bag()
+            await repo.AddAsync(new Bag()
             {
                 ImageUrl = imageUrl,
                 Name = model.Name,
@@ -50,15 +68,24 @@ namespace DressUp.Core.Services
                 Condition = model.Condition,
             });
 
-            repo.SaveChanges();
+            await repo.SaveChangesAsync();
 
         }
 
-        public void AddClothes([FromForm]ClothesViewModel model)
-        {        
-            string imageUrl = cloudinaryService.Image(model.Image, "DressUpImages");
+        public async Task AddClothes([FromForm]ClothesViewModel model)
+        {
+            var existing = repo.All<Cloth>()
+                .Where(c => c.Name == model.Name)
+                .FirstOrDefault();
 
-            repo.AddAsync(new Cloth()
+            if (existing != null)
+            {
+                throw new ArgumentException("Clothing piece exist");
+            }
+
+            string imageUrl = cloudinaryService.Image(model.Image, "DressUpImages");           
+
+            await repo.AddAsync(new Cloth()
             {
                 Category = model.Category,
                 Color = model.Color,
@@ -72,13 +99,22 @@ namespace DressUp.Core.Services
                 ClothingType = model.ClothingType,
             });
 
-             repo.SaveChanges();
+             await repo.SaveChangesAsync();
         }
-        public void AddShoes([FromForm] ShoesViewModel model)
+        public async Task AddShoes([FromForm] ShoesViewModel model)
         {
+            var existing = repo.All<Shoe>()
+                .Where(s => s.Name == model.Name)
+                .FirstOrDefault();
+
+            if (existing != null)
+            {
+                throw new ArgumentException("Shoes exist");
+            }
+
             string imageUrl = cloudinaryService.Image(model.Image, "DressUpImages");
 
-            repo.AddAsync(new Shoe()
+            await repo.AddAsync(new Shoe()
             {
                 ImageUrl = imageUrl,
                 Name = model.Name,
@@ -89,28 +125,28 @@ namespace DressUp.Core.Services
                 Condition = model.Condition,
             });
 
-            repo.SaveChanges();
+            await repo.SaveChangesAsync();
         }
 
-        public void AddColor([FromForm] ColorViewModel model)
+        public async Task AddColor([FromForm] ColorViewModel model)
         {
-            repo.AddAsync(new Color
+            await repo.AddAsync(new Color
             {
                 ColorName = model.ColorName,
             });
 
-            repo.SaveChanges();
+            await repo.SaveChangesAsync();
         }
 
-        public void AddMaterial([FromForm] MaterialViewModel model)
+        public async Task AddMaterial([FromForm] MaterialViewModel model)
         {
 
-            repo.AddAsync(new Material
+            await repo.AddAsync(new Material
             {
                 MaterialName = model.MaterialName,
             });
 
-            repo.SaveChanges();
+            await repo.SaveChangesAsync();
         }
         
 

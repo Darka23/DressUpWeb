@@ -1,4 +1,22 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
+function AddToCart(type, id) {
 
-// Write your JavaScript code.
+    const obj = {
+        objId: type+id,
+        type: type,
+        id: id
+    };
+
+    let localStorageArray = [];
+
+    if (localStorage.getItem("Cart")) {
+        localStorageArray = JSON.parse(localStorage.getItem("Cart"))
+    }
+
+    if (localStorageArray.filter(x => x.objId == obj.objId).length <= 0) {
+        console.log(localStorageArray);
+        localStorageArray.push(obj);
+    }
+   
+    localStorage.setItem("Cart", JSON.stringify(localStorageArray))
+}

@@ -1,7 +1,4 @@
-﻿@using DressUp.Core.Models.CartModels
-@model Cart
-
-@{
+﻿@{
     ViewData["Title"] = "Shopping Cart";
 }
 
@@ -29,36 +26,57 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><img class="product-img" src="https://res.cloudinary.com/du3awsoi5/image/upload/v1648317731/DressUpImages/wxdkgh6skuufr052wgfl.jpg" /></td>
-            <td>Otto</td>
-            <td>md</td>
-            <td>
-                <a href="">
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </a>
-            </td>
-        </tr>
-
-        <tr>
-            <td><img class="product-img" src="https://res.cloudinary.com/du3awsoi5/image/upload/v1648317731/DressUpImages/wxdkgh6skuufr052wgfl.jpg" /></td>
-            <td>Thornton</td>
-            <td>fat</td>
-            <td>
-                <a href="">
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td><img class="product-img" src="https://res.cloudinary.com/du3awsoi5/image/upload/v1648317731/DressUpImages/wxdkgh6skuufr052wgfl.jpg" /></td>
-            <td>the Bird</td>
-            <td>twit</td>
-            <td>
-                <a href="">
-                    <i class="fa-solid fa-circle-xmark"></i>
-                </a>
-            </td>
-        </tr>
     </tbody>
 </table>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+
+    $(document).ready(function() {
+
+    const tbody = $("tbody");
+    });
+
+    console.log("fetching");
+
+    let lsObj = [];
+
+     if (localStorage.getItem("Cart")) {
+        lsObj = JSON.parse(localStorage.getItem("Cart"))
+    }
+
+    if(lsObj.length <= 0) return;
+
+    lsObj.forEach(x=> {
+
+    let options = {};
+
+    options.url = "/Cart/GetCartItemFor"+x.type;
+    options.type = "GET";
+    options.data = {"Criteria": x.id};
+    options.dataType = "json";
+
+    options.success = (data)=> {
+
+        console.log(data);
+
+        tbody.innerHTML+= `
+            <tr>
+                <td><img class="product-img" src="${data.ImageUrl}" /></td>
+                <td>${data.Name}</td>
+                <td>${data.Price}</td>
+                <td>
+                    <a href="">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </a>
+                </td>
+            </tr>`
+    }
+
+    $.ajax(options);
+
+    });
+
+
+</script>

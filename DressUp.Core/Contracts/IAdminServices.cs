@@ -7,12 +7,12 @@ namespace DressUp.Core.Contracts
 {
     public interface IAdminServices
     {
-        void AddColor([FromForm] ColorViewModel model);
-        void AddMaterial([FromForm] MaterialViewModel model);
-        void AddClothes([FromForm] ClothesViewModel model);
-        void AddAccessories([FromForm] AccessoriesViewModel model);
-        void AddShoes([FromForm] ShoesViewModel model);
-        void AddBags([FromForm] BagsViewModel model);
+        Task AddColor([FromForm] ColorViewModel model);
+        Task AddMaterial([FromForm] MaterialViewModel model);
+        Task AddClothes([FromForm] ClothesViewModel model);
+        Task AddAccessories([FromForm] AccessoriesViewModel model);
+        Task AddShoes([FromForm] ShoesViewModel model);
+        Task AddBags([FromForm] BagsViewModel model);
 
 
         IEnumerable<Color> GetColors();

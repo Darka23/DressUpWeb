@@ -1,53 +1,19 @@
 ﻿<link rel="stylesheet" href="~/css/css/adminlte.css" />
 
+<style>
+    #sideMenu {
+    padding-bottom: 20px;
+}
+</style>
 
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
 
-        @* <li class="nav-item">
-            <a href="/Clothes/ClothesMen" class="nav-link">
-            <i class="fa-solid fa-person fa-xl"></i>
-            <p class="list-item-names">&nbsp;Мъже</p>
-            </a>
-            </li>
-            <li class="nav-item">
-            <a href="/Clothes/ClothesWomen" class="nav-link">
-            <i class="fa-solid fa-person-dress fa-xl"></i>
-            <p class="list-item-names">&nbsp;Жени</p>
-            </a>
-            </li>
-            <li class="nav-item">
-            <a href="/Clothes/ClothesChildren" class="nav-link">
-            <i class="fa-solid fa-child fa-lg"></i>
-            <p class="list-item-names">&nbsp;Деца</p>
-            </a>
-            </li>*@
-
-        @*<li class="nav-item">
-            <div class="dropdown">
-            <button onclick="location.href='/Clothes/ClothesAll'" class="btn btn-block btn-outline-primary btn-lg" >
-            <i class="fa-solid fa-shirt fa-lg"></i>
-            <a >&nbsp Дрехи</a>
-            </button>
-            <div class="dropdown-content">
-            <a href="/Clothes/ClothesMen" class="nav-link">
-            <p class="list-item-names">&nbsp;За Мъже</p>
-            </a>
-            <a href="/Clothes/ClothesWomen" class="nav-link">
-            <p class="list-item-names">&nbsp;За Жени</p>
-            </a>
-            <a href="/Clothes/ClothesChildren" class="nav-link">
-            <p class="list-item-names">&nbsp;За Деца</p>
-            </a>
-            </div>
-            </div>
-            </li>*@
-
-        <li class="nav-item">
-            <a href="#" class="nav-link">
-                <i class="fa-solid fa-shirt fa-lg">                    
+        <li id="sideMenu" class="nav-item">
+            <a class="nav-link">
+                <i class="fa-solid fa-shirt fa-lg">
                 </i>
                 <p>
                     Дрехи
@@ -77,9 +43,9 @@
                 </li>
             </ul>
         </li>
-        </br>
-        <li class="nav-item">
-            <a href="#" class="nav-link">
+
+        <li id="sideMenu" class="nav-item">
+            <a class="nav-link">
                 <i class="fa-solid fa-shoe-prints fa-lg">
                 </i>
                 <p>
@@ -112,15 +78,14 @@
             </ul>
         </li>
 
-        </br>
-
-        <li class= "nav-item">
-            <a href="#" class="nav-link">
+        <li id="sideMenu" class="nav-item">
+            <a class="nav-link">
                 <i class="fa-solid fa-bag-shopping fa-lg">
-                    </i>
-                <p>Чанти и раници
+                </i>
+                <p>
+                    Чанти и раници
                     <i class="fas fa-angle-left right">
-                        </i>
+                    </i>
                 </p>
             </a>
             <ul class="nav nav-treeview" style="display:none;">
@@ -146,13 +111,11 @@
                 </li>
             </ul>
         </li>
-        
-        </br>
 
-        <li class= "nav-item ">
-            <a href="#" class="nav-link">
+        <li id="sideMenu" class="nav-item ">
+            <a class="nav-link">
                 <i class="fa-solid fa-ring fa-lg">
-                    </i>
+                </i>
                 <p>
                     Аксесоари
                     <i class="fas fa-angle-left right"></i>
@@ -184,7 +147,12 @@
                         <p>Ключодържатели</p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/Accessories/Accessories" class="nav-link">
+                        <p>Всички аксесоари</p>
+                    </a>
+                </li>
             </ul>
-        </li>       
+        </li>
     </ul>
 </nav>

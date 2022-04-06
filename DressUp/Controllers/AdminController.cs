@@ -1,4 +1,5 @@
-﻿using DressUp.Core.Contracts;
+﻿using DressUp.Core.Constants;
+using DressUp.Core.Contracts;
 using DressUp.Core.Models;
 using DressUp.Core.Models.AddViewModels;
 using DressUp.Infrastructure.Data.Common;
@@ -8,6 +9,7 @@ using DressUp.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Diagnostics;
 
 namespace DressUp.Controllers
 {
@@ -31,9 +33,16 @@ namespace DressUp.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddColor(ColorViewModel model)
+        public async Task<IActionResult> AddColor(ColorViewModel model)
         {           
-            adminServices.AddColor(model);
+            try
+            {
+                await adminServices.AddColor(model);
+            }
+            catch (ArgumentException ae)
+            {
+                return RedirectToAction("AddColor", "Admin");
+            }
 
             return Redirect("/Admin/AdminPanel");
         }
@@ -44,9 +53,16 @@ namespace DressUp.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddMaterial(MaterialViewModel model)
-        {
-            adminServices.AddMaterial(model);
+        public async Task<IActionResult> AddMaterial(MaterialViewModel model)
+        {          
+            try
+            {
+                await adminServices.AddMaterial(model);
+            }
+            catch (ArgumentException ae)
+            {
+                return RedirectToAction("AddMaterial", "Admin");
+            }
 
             return Redirect("/Admin/AdminPanel");
         }
@@ -63,9 +79,16 @@ namespace DressUp.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddClothes(ClothesViewModel model)
+        public async Task<IActionResult> AddClothes(ClothesViewModel model)
         {
-            adminServices.AddClothes(model);
+            try
+            {
+                await adminServices.AddClothes(model);
+            }
+            catch (ArgumentException ae)
+            {
+                return RedirectToAction("AddClothes", "Admin");
+            }
 
             return Redirect("/Admin/AdminPanel");
         }
@@ -82,9 +105,16 @@ namespace DressUp.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddBags(BagsViewModel model)
+        public async Task<IActionResult> AddBags(BagsViewModel model)
         {
-            adminServices.AddBags(model);
+            try
+            {
+                await adminServices.AddBags(model);
+            }
+            catch (ArgumentException ae)
+            {
+                return RedirectToAction("AddBags", "Admin");
+            }
 
             return Redirect("/Admin/AdminPanel");
         }
@@ -96,9 +126,16 @@ namespace DressUp.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddAccessories(AccessoriesViewModel model)
-        {
-            adminServices.AddAccessories(model);
+        public async Task<IActionResult> AddAccessories(AccessoriesViewModel model)
+        {           
+            try
+            {
+                await adminServices.AddAccessories(model);
+            }
+            catch (ArgumentException ae)
+            {
+                return RedirectToAction("AddAccessory", "Admin");
+            }
 
             return Redirect("/Admin/AdminPanel");
         }
@@ -110,9 +147,16 @@ namespace DressUp.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddShoes(ShoesViewModel model)
-        {
-            adminServices.AddShoes(model);
+        public async Task<IActionResult> AddShoes(ShoesViewModel model)
+        {                      
+            try
+            {
+                await adminServices.AddShoes(model);
+            }
+            catch (ArgumentException ae)
+            {
+                return RedirectToAction("AddShoes", "Admin");
+            }
 
             return Redirect("/Admin/AdminPanel");
         }

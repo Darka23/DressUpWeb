@@ -18,14 +18,20 @@ namespace DressUp.Controllers
             return View();
         }
 
+        [HttpGet]
+        public JsonResult GetCartItemForCloth(int id)
+        {
+            var clothing = cartServices.AddClothToCart(id);
+
+            return Json(clothing);
+        }
+
         [HttpPost]
         public IActionResult AddClothToCart(int id)
         {
             var clothing = cartServices.AddClothToCart(id);
 
             //ViewData[MessageConstant.SuccessMessage] = "Успешно добавяне в количката!";
-
-            Extensions.SessionExtensions.Set(HttpContext.Session,"Cart", new Cart());
 
             return RedirectToAction("Cart");
         }

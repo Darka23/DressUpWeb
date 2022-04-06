@@ -47,6 +47,8 @@
   box-sizing: border-box;
 }
 
+
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -556,9 +558,7 @@ pre code {
 .container-md,
 .container-lg,
 .container-xl {
-  width: 100%;
-  padding-right: 7.5px;
-  padding-left: 7.5px;
+  width: 100%; /*asni*/
   margin-right: auto;
   margin-left: auto;
 }

@@ -1,19 +1,15 @@
-﻿<link rel="stylesheet" href="~/css/css/style.css" />
+﻿@using X.PagedList.Mvc.Core;
+@using X.PagedList;
+
 
 @{
     ViewData["Title"] = "Детски дрехи";
 }
 
-<style>
-    #sizeTable {
-        position: center;
-        height: 35px;
-        width: 175px;
-    }
-</style>
 
 <title>@ViewData["Title"]</title>
 
+<link rel="stylesheet" href="~/css/css/style.css" />
 <div class="d-flex justify-content-end">
     <a id="sizeTable" class="btn btn-block btn-primary" href="/Home/SizeTable" role="button">
         &nbsp; Таблица с размери
@@ -27,7 +23,7 @@
             <!-- /row-->
 
             <div class="ecom-products-grids row mt-lg-5 mt-3">
-                @foreach (var item in Model.Clothes)
+                @foreach (var item in Model)
                 {
                     <div class="col-lg-3 col-6 product-incfhny mt-4">
                         <div class="product-grid2 transmitv">
@@ -54,4 +50,23 @@
             <!-- //row-->
         </div>
     </div>
+    @Html.PagedListPager((IPagedList)Model, page => Url.Action("ClothesChildren", new { page = page }),
+    new X.PagedList.Mvc.Common.PagedListRenderOptions
+    {
+        DisplayItemSliceAndTotal = true,
+        ContainerDivClasses = new[] { "navigation" },
+        LiElementClasses = new[] { "page-item" },
+        PageClasses = new[] { "page-link" },
+    })
 </section>
+
+@section Scripts{
+    <script>
+        // Workaround to fix style of text for showing items .. through ..
+        // Problem related to Boostrap 4 according to issue in link below
+        // https://github.com/dncuug/X.PagedList/issues/127
+        $(document).ready(function () {
+            $('ul.pagination > li.disabled > a').addClass('page-link');
+        });
+    </script>
+}

@@ -551,3 +551,9 @@ E:\DressUpGit\DressUpWeb\DressUp\obj\Debug\net6.0\DressUp.pdb
 E:\DressUpGit\DressUpWeb\DressUp\obj\Debug\net6.0\DressUp.genruntimeconfig.cache
 E:\DressUpGit\DressUpWeb\DressUp\bin\Debug\net6.0\CloudinaryDotNet.dll
 E:\DressUpGit\DressUpWeb\DressUp\obj\Debug\net6.0\refint\DressUp.dll
+E:\DressUpGit\DressUpWeb\DressUp\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\DressUpGit\DressUpWeb\DressUp\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+E:\DressUpGit\DressUpWeb\DressUp\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+E:\DressUpGit\DressUpWeb\DressUp\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+E:\DressUpGit\DressUpWeb\DressUp\bin\Debug\net6.0\X.PagedList.dll
+E:\DressUpGit\DressUpWeb\DressUp\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll

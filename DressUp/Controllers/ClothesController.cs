@@ -1,5 +1,6 @@
 ﻿using DressUp.Core.Contracts;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList;
 
 namespace DressUp.Controllers
 {
@@ -12,52 +13,44 @@ namespace DressUp.Controllers
             clothesServices = _clothesServices;
         }
 
-        public IActionResult ClothesMen()
+        public IActionResult ClothesMen(int? page)
         {
-            var clothes = clothesServices.GetMenClothes();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfClothes = clothesServices.GetMenClothes()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Clothes = clothes
-            };
-
-            return View(model);
+            return View(onePageOfClothes);
         }
 
-        public IActionResult ClothesWomen()
+        public IActionResult ClothesWomen(int? page)
         {
-            var clothes = clothesServices.GetWomenClothes();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfClothes = clothesServices.GetWomenClothes()
+                .ToPagedList(pageNumber,pageSize);
 
-            var model = new
-            {
-                Clothes = clothes
-            };
-
-            return View(model);
+            return View(onePageOfClothes);
         }
-        public IActionResult ClothesChildren()
+        public IActionResult ClothesChildren(int? page)
         {
-            var clothes = clothesServices.GetChildrenClothes();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfClothes = clothesServices.GetChildrenClothes()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Clothes = clothes
-            };
-
-            return View(model);
+            return View(onePageOfClothes);
         }
 
-        public IActionResult ClothesAll()
+        public IActionResult ClothesAll(int? page)
         {
-            var clothes = clothesServices.GetAllClothes();
+            var pageNumber = page ?? 1;
+            int pageSize = 12;
+            var onePageOfClothes = clothesServices.GetAllClothes()
+                .ToPagedList(pageNumber, pageSize);
 
-            var model = new
-            {
-                Clothes = clothes
-            };
-
-            return View(model);
-        }
+            return View(onePageOfClothes);
+        }      
 
         public IActionResult Details(int id)
         {
