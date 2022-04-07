@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "U2Ig0Rd6By3PDcuQ/2aXctlHRiTiuNGwObM3kjCo1/I=",
+  "Hash": "kH3KMMgZsKAjJtUp+5Lfswk//N58auMBMI/G2+jzJbU=",
   "Source": "DressUp",
   "BasePath": "_content/DressUp",
   "Mode": "Default",
@@ -3772,6 +3772,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\credit\\visa.png"
+    },
+    {
+      "Identity": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\img\\dressup-final.svg",
+      "SourceId": "DressUp",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\",
+      "BasePath": "_content/DressUp",
+      "RelativePath": "img/dressup-final.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\dressup-final.svg"
     },
     {
       "Identity": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\img\\img1.jpg",

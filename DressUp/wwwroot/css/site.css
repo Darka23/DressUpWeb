@@ -18,6 +18,11 @@ html {
     width: 175px;
 }
 
+#addButton {
+    margin-top: 25px;
+    width: 150px;
+    height: 40px; /*?*/
+}
 
 html {
   position: relative;

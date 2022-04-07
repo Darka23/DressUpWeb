@@ -33,10 +33,10 @@
                                 </a>
                                 <div class="transmitv single-item">
                                     <form action="@Url.Action("AddClothToCart", "Cart")?id=@(item.Id)" method="post">
-                                        <button type="submit" class="transmitv-cart ptransmitv-cart add-to-cart">
+                                    </form>
+                                        <button type="" onclick="AddToCart('Cloth',@item.Id)" class="transmitv-cart ptransmitv-cart add-to-cart">
                                             Add to Cart
                                         </button>
-                                    </form>
                                 </div>
                             </div>
                             <div class="product-content">

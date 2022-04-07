@@ -38,7 +38,6 @@ namespace DressUp.Core.Models.AddViewModels
         [Required]
         public string Material { get; set; }
 
-        [Required]
         [StringLength(250)]
         public string Description { get; set; }
     }

@@ -9,7 +9,11 @@
 <link rel="stylesheet" href="~/css/site.css" />
 
 <style>
-    
+    #addButton{
+        margin-top:25px;
+        width: 150px;
+        height: 40px; /*?*/
+    }
 </style>
 
 
@@ -34,9 +38,8 @@
         <h3>Състояние: @Model.Condition</h3>
 
         <div class="btn_form">
-            <form>
-                <input type="submit" value="Add to Cart" title="">
-            </form>
+
+            <button id="addButton" class="btn btn-block btn-primary" onclick="AddToCart('Cloth',@Model.Id)">Add To Cart</button>
 
             @if (User.IsInRole("Administrator"))
             {

@@ -25,58 +25,70 @@
             <th scope="col"></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody id="cartContent">
     </tbody>
 </table>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 
-
     $(document).ready(function() {
 
-    const tbody = $("tbody");
+        const tbody = $("#cartContent");
+
+        let lsObj = [];
+
+        if (localStorage.getItem("Cart")) {
+            lsObj = JSON.parse(localStorage.getItem("Cart"))
+            }
+
+        if(lsObj.length <= 0) {return;}
+
+        let options = {};
+
+        lsObj.forEach(x=> {
+
+            options.url = "/Cart/GetCartItemFor"+x.type;
+            options.type = "GET";
+            options.data = {"id": x.id};
+            options.dataType = "json";
+
+            options.success = (data) => {
+
+                    tbody.append(`
+                        <tr id="`+ x.type+x.id +`">
+                            <td><img class="product-img" src="`+ data.imageUrl + `" /></td>
+                            <td>`+ data.name +`</td>
+                            <td>`+ data.price.toFixed(2) +"лв."+`</td>
+                            <td>
+                                <a onclick="RemoveFromCart(this)">
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                </a>
+                            </td>
+                        </tr>`)
+        }
+
+        $.ajax(options);
+
+        });
     });
 
-    console.log("fetching");
+            function RemoveFromCart(el){
 
-    let lsObj = [];
+                const tr = $(el).closest("tr");
 
-     if (localStorage.getItem("Cart")) {
-        lsObj = JSON.parse(localStorage.getItem("Cart"))
-    }
+               let cart = JSON.parse(localStorage.getItem("Cart"));
 
-    if(lsObj.length <= 0) return;
+               cart.forEach(x=>{
 
-    lsObj.forEach(x=> {
+                   if (cart.filter(x => x.objId == tr).length <= 0) {
+                        cart.splice(cart.indexOf(x), 1);
+                        console.log(cart);
 
-    let options = {};
+                }
+                localStorage.setItem("Cart", JSON.stringify(cart));
 
-    options.url = "/Cart/GetCartItemFor"+x.type;
-    options.type = "GET";
-    options.data = {"Criteria": x.id};
-    options.dataType = "json";
-
-    options.success = (data)=> {
-
-        console.log(data);
-
-        tbody.innerHTML+= `
-            <tr>
-                <td><img class="product-img" src="${data.ImageUrl}" /></td>
-                <td>${data.Name}</td>
-                <td>${data.Price}</td>
-                <td>
-                    <a href="">
-                        <i class="fa-solid fa-circle-xmark"></i>
-                    </a>
-                </td>
-            </tr>`
-    }
-
-    $.ajax(options);
-
-    });
-
-
+                tr.remove();
+               })            
+            }
 </script>
