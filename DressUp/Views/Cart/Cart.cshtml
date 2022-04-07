@@ -11,23 +11,41 @@
     th {
         width: 10%;
     }
+
+    #checkoutBtn{
+        position: absolute;
+        top: 0;
+        right: 65px;
+        width:170px;
+        height:60px;
+        font-size:28px;
+    }
+
+    .contentCheckout{
+        position: relative;
+    }
 </style>
 
 
-<h1>Shopping Cart</h1>
+<h1>Количка</h1>
 
 <table class="table table-striped">
     <thead>
         <tr>
-            <th scope="col">Product</th>
-            <th scope="col">Name</th>
-            <th scope="col">Price</th>
+            <th scope="col">Продукт</th>
+            <th scope="col">Име</th>
+            <th scope="col">Цена</th>
             <th scope="col"></th>
         </tr>
     </thead>
     <tbody id="cartContent">
     </tbody>
 </table>
+
+<div class="contentCheckout">
+<button id = "checkoutBtn" class="btn btn-primary pull-right">Купи</button>
+</div>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
@@ -76,6 +94,9 @@
             function RemoveFromCart(el){
 
                 const tr = $(el).closest("tr");
+                const trId = $(el).closest("tr").attr('id');
+
+                console.log(trId);
 
                let cart = JSON.parse(localStorage.getItem("Cart"));
 
@@ -83,13 +104,13 @@
 
                    if (cart.filter(x => x.objId == tr).length <= 0) {
                         cart.splice(cart.indexOf(x), 1);
-                        console.log(cart);
+                        console.log(x.objId)
+                        console.log(tr)
                    }
 
                 })
                 localStorage.setItem("Cart", JSON.stringify(cart));
 
-                tr.remove();
-                          
+                tr.remove();                         
             }
 </script>
