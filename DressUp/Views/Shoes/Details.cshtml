@@ -25,9 +25,9 @@
         <h3>Състояние: @Model.Condition</h3> 
         
         <div class="btn_form">
-            <form action="@Url.Action("AddShoesToCart", "Cart")?id=@(Model.Id)" method="post">
-                <input type="submit" value="Add to Cart" title="">
-            </form>
+            
+            <button id="addButton" class="btn btn-block btn-primary" onclick="AddToCart('Shoe',@Model.Id)">Add To Cart</button>
+
             @if (User.IsInRole("Administrator"))
             {
                 <form>

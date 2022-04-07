@@ -21,9 +21,9 @@
         <p class="quick_desc">Описание: @Model.Description</p>        
         
         <div class="btn_form">
-            <form action="@Url.Action("AddAccessoryToCart", "Cart")?id=@(Model.Id)" method="post">
-                <input type="submit" value="Add to Cart" title="">
-            </form>
+            
+            <button id="addButton" class="btn btn-block btn-primary" onclick="AddToCart('Accessory',@Model.Id)">Add To Cart</button>
+
             @if (User.IsInRole("Administrator"))
             {
                 <form>

@@ -32,7 +32,7 @@ namespace DressUp.Controllers
         [HttpPost]
         public IActionResult AddClothToCart(int id)
         {
-            var clothing = cartServices.AddClothToCart(id);         
+            var clothing = cartServices.AddClothToCart(id);
 
             return RedirectToAction("Cart");
         }
@@ -73,7 +73,7 @@ namespace DressUp.Controllers
 
         //Shoes
         [HttpGet]
-        public JsonResult GetCartItemForShoes(int id)
+        public JsonResult GetCartItemForShoe(int id)
         {
             var shoes = cartServices.AddShoesToCart(id);
 

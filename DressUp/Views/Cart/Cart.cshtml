@@ -84,11 +84,12 @@
                    if (cart.filter(x => x.objId == tr).length <= 0) {
                         cart.splice(cart.indexOf(x), 1);
                         console.log(cart);
+                   }
 
-                }
+                })
                 localStorage.setItem("Cart", JSON.stringify(cart));
 
                 tr.remove();
-               })            
+                          
             }
 </script>
