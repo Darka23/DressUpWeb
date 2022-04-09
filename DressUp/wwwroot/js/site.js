@@ -18,5 +18,6 @@ function AddToCart(type, id) {
         localStorageArray.push(obj);
     }
    
-    localStorage.setItem("Cart", JSON.stringify(localStorageArray))
+    localStorage.setItem("Cart", JSON.stringify(localStorageArray));
+
 }

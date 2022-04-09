@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using DressUp.Core.Models.CartModels;
 using DressUp.Infrastructure.Data.Repositories;
 using DressUp.Infrastructure.Data.Models;
+using DressUp.Core.Constants;
 
 namespace DressUp.Controllers
 {
@@ -24,7 +25,7 @@ namespace DressUp.Controllers
         [HttpGet]
         public JsonResult GetCartItemForCloth(int id)
         {
-            var clothing = cartServices.AddClothToCart(id);
+            var clothing = cartServices.AddClothToCart(id);           
 
             return Json(clothing);
         }

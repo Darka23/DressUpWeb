@@ -107,25 +107,25 @@
         position: relative;
         flex: 0 0 100%;
         counter-increment: item;
-        
     }
 
         .carousel__slide:nth-child(even) {
-            
-           
         }
 
     #carousel__slide1 {
-        background-image: url(https://api.ferrari.com/cms/network/medias//resize/6093c2680abef6224c06a042-ferrari-magazine-oGehKAJD4w.jpg?apikey=9QscUiwr5n0NhOuQb463QEKghPrVlpaF);
+        background-image: url(https://www.loveyourclothes.org.uk/sites/default/files/styles/responsive/public/lyc-campaigns-website-header-1600.jpg?itok=DLdKu9UI);
     }
+
     #carousel__slide2 {
-        background-image: url(https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/hero-banner/09_20_aven_ulti/gate_family_og_01.jpg);
+        background-image: url(https://media.vogue.co.uk/photos/5f3e765c3771316bf98bbf1d/master/pass/BagCollage.jpg);
     }
+
     #carousel__slide3 {
-        background-image: url(https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/hero-banner/09_20_aven_ulti/gate_family_og_01.jpg);
+        background-image: url(https://ngo-shoes.com/img/rocketmegamenu/nouveaute-6220cf71557a0.jpg);
     }
+
     #carousel__slide4 {
-        background-image: url(https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/models_gw/hero-banner/09_20_aven_ulti/gate_family_og_01.jpg);
+        background-image: url(https://wallpaperaccess.com/full/4571409.jpg);
     }
 
     .carousel__slide:before {
@@ -208,7 +208,20 @@
     }
 
         .btn-home:hover {
-            background-color: black;
+            background-color: #007bff;
+        }
+
+
+        #blackTxt{
+            color: black;
+            font-size: 50px;
+            font-family:Times New Roman sans-serif;
+        }
+
+        #whiteTxt{
+            color: white;
+            font-size: 50px;
+            -webkit-text-stroke: 1px black;
         }
 
 </style>
@@ -227,20 +240,44 @@
     <ol class="carousel__viewport">
         <li id="carousel__slide1" tabindex="0" class="carousel__slide">
             <div class="carousel__snapper"></div>
-            <p>asni</p>
-            <button class="btn-home" onclick="location.href='/Clothes/ClothesAll'">Пазарувай сега</button>
+
+            <div class="d-flex align-items-center justify-content-center" style="height: 600px">
+                <div class="p-2 bd-highlight col-example">
+                    <p id = "blackTxt">Открийте дрехи точно по вкуса си</p>
+                    <button class="btn-home" onclick="location.href='/Clothes/ClothesAll'">Разгледай тук</button>
+                </div>
+            </div>
+
         </li>
         <li id="carousel__slide2" tabindex="0" class="carousel__slide">
             <div class="carousel__snapper"></div>
-            <button class="btn-home" onclick="location.href='/Bags/Bags'">Пазарувай сега</button>
+
+            <div class="d-flex align-items-center justify-content-center" style="height: 600px">
+                <div class="p-2 bd-highlight col-example">
+                    <p id = "whiteTxt">Намерете чанти и раници за всякакви поводи</p>
+                    <button class="btn-home" onclick="location.href='/Bags/Bags'">Разгледай тук</button>
+                </div>
+            </div>
         </li>
         <li id="carousel__slide3" tabindex="0" class="carousel__slide">
             <div class="carousel__snapper"></div>
-            <button class="btn-home" onclick="location.href='/Shoes/Shoes'">Пазарувай сега</button>
+
+            <div class="d-flex align-items-center justify-content-center" style="height: 600px">
+                <div class="p-2 bd-highlight col-example">
+                    <p id = "whiteTxt">Вижте предложенията ни за маркови обувки</p>
+                    <button class="btn-home" onclick="location.href='/Shoes/Shoes'">Разгледай тук</button>
+                </div>
+            </div>
         </li>
         <li id="carousel__slide4" tabindex="0" class="carousel__slide">
             <div class="carousel__snapper"></div>
-            <button class="btn-home" onclick="location.href='/Accessories/Accessories'">Пазарувай сега</button>
+
+            <div class="d-flex align-items-center justify-content-center" style="height: 600px">
+                <div class="p-2 bd-highlight col-example">
+                    <p id = "blackTxt">Добавете нов аксесоар към стила си</p>
+                    <button class="btn-home" onclick="location.href='/Accessories/Accessories'">Разгледай тук</button>
+                </div>
+            </div>
         </li>
     </ol>
 
