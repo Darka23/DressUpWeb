@@ -14,6 +14,22 @@
     </a>
 </div>
 
+<select>
+    <option value="Тениски">Тениски</option>
+    <option value="Суичъри">Суичъри</option>
+    <option value="Якета">Якета</option>
+    <option value="Ризи">Ризи</option>
+    <option value="Поли">Поли</option>
+    <option value="Рокли">Рокли</option>
+    <option value="Дънки">Дънки</option>
+    <option value="Блузи">Блузи</option>
+    <option value="Пуловери">Пуловери</option>
+    <option value="Панталони">Панталони</option>
+    <option value="Къси панталони">Къси панталони</option>
+    <option value="Спортни шорти">Спортни шорти</option>
+    <option value="Спортни долнища">Спортни долнища</option>
+    <option value="Клинове">Клинове</option>
+</select>
 
 <section class="w3l-ecommerce-main">
     <div class="ecom-contenthny py-5">
@@ -30,9 +46,9 @@
                                     <img class="pic-1 img-fluid" src="@item.ImageUrl">
                                 </a>
                                 <div class="transmitv single-item">
-                                        <button onclick="AddToCart('Cloth',@item.Id)" class="transmitv-cart ptransmitv-cart add-to-cart">
-                                            Add to Cart
-                                        </button>
+                                    <button onclick="AddToCart('Cloth',@item.Id)" class="transmitv-cart ptransmitv-cart add-to-cart">
+                                        Add to Cart
+                                    </button>
                                 </div>
                             </div>
                             <div class="product-content">
@@ -50,17 +66,17 @@
     @Html.PagedListPager((IPagedList)Model, page => Url.Action("ClothesAll", new { page = page }),
     new X.PagedList.Mvc.Common.PagedListRenderOptions
     {
-        DisplayItemSliceAndTotal = true,
-        ContainerDivClasses = new[] { "navigation" },
-        LiElementClasses = new[] { "page-item" },
-        PageClasses = new[] { "page-link" },
+    DisplayItemSliceAndTotal = true,
+    ContainerDivClasses = new[] { "navigation" },
+    LiElementClasses = new[] { "page-item" },
+    PageClasses = new[] { "page-link" },
     })
 </section>
 
 @section Scripts{
-    <script>
-        $(document).ready(function () {
-            $('ul.pagination > li.disabled > a').addClass('page-link');
-        });
-    </script>
+<script>
+    $(document).ready(function () {
+        $('ul.pagination > li.disabled > a').addClass('page-link');
+    });
+</script>
 }

@@ -24,6 +24,9 @@
                 <li class="nav-item">
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
+                <a class="nav-link btn btn-link text-dark" href="/Home/AboutUs" role="button">
+                        &nbsp; За нас
+                    </a>
                 @if (User.IsInRole("Administrator"))
                 {
                     <a class="nav-link btn btn-link text-dark" href="/Admin/AdminPanel" role="button">
@@ -121,10 +124,10 @@
         <footer class="main-footer">
             <!-- To the right -->
             <div class="float-right d-none d-sm-inline">
-                Anything you want
+                Всичко което пожелаеш
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; 2014-@DateTime.Now.Year <a href="/">Dress Up</a>.</strong> All rights reserved.
+            <strong>Copyright &copy; 2014-@DateTime.Now.Year <a href="/Home/AboutUs">Dress Up</a>.</strong> All rights reserved.
         </footer>
     </div>
     <!-- ./wrapper -->

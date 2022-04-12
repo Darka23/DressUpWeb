@@ -5,7 +5,7 @@ namespace DressUp.Controllers
 {
     public class AccessoriesController : BaseController
     {
-        private readonly IAccessoriesServices accessoriesServices;
+        private readonly IAccessoriesServices accessoriesServices;     
 
         public AccessoriesController(IAccessoriesServices _accessoriesServices)
         {

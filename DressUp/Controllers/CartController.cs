@@ -21,6 +21,11 @@ namespace DressUp.Controllers
             return View();
         }
 
+        public IActionResult Buy()
+        {
+            return View();
+        }
+
         //Clothes
         [HttpGet]
         public JsonResult GetCartItemForCloth(int id)

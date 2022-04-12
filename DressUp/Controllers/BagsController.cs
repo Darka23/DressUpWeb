@@ -7,6 +7,7 @@ namespace DressUp.Controllers
     public class BagsController : BaseController
     {
         private readonly IBagsServices bagsServices;
+        private Random rnd = new Random();
 
         public BagsController(IBagsServices _bagsServices)
         {
@@ -17,6 +18,7 @@ namespace DressUp.Controllers
             var pageNumber = page ?? 1;
             int pageSize = 12;
             var onePageOfBags = bagsServices.GetBags()
+                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfBags);
@@ -27,6 +29,7 @@ namespace DressUp.Controllers
             var pageNumber = page ?? 1;
             int pageSize = 12;
             var onePageOfBags = bagsServices.GetBagsMen()
+                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfBags);
@@ -37,6 +40,7 @@ namespace DressUp.Controllers
             var pageNumber = page ?? 1;
             int pageSize = 12;
             var onePageOfBags = bagsServices.GetBagsWomen()
+                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfBags);
@@ -47,6 +51,7 @@ namespace DressUp.Controllers
             var pageNumber = page ?? 1;
             int pageSize = 12;
             var onePageOfBags = bagsServices.GetBagsChildren()
+                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfBags);

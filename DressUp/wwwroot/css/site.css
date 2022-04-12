@@ -29,10 +29,62 @@ html {
     width: 175px;
 }
 
+#aboutUsHead {
+    padding-top: 30px;
+    text-align: center;
+}
+
+#profileIcon {
+    padding-left: 19px;
+    padding-right: 20px;
+}
+
+.leftPanel {
+    padding-top: 40px;
+    float: left;
+    font-size: 22px;
+    margin:40px;
+}
+
+.textLine {
+    margin: 0;
+    padding: 0;
+}
+
+.rightPanel {
+    padding-top: 40px;
+    float: right;
+    font-size: 22px;
+    margin: 40px;
+}
+
 #addButton {
     margin-top: 25px;
     width: 150px;
     height: 40px; /*?*/
+}
+
+.product-img {
+    width: 200px;
+    margin-right: -300px;
+}
+
+#productGrid {
+    width: 10%;
+}
+
+#checkoutBtn {
+    position: relative;
+    left: 750px;
+    right: 65px;
+    width: 170px;
+    height: 60px;
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+.cartHeader {
+    text-align: center;
 }
 
 html {

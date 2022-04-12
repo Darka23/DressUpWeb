@@ -7,6 +7,7 @@ namespace DressUp.Controllers
     public class ShoesController : BaseController
     {
         private readonly IShoesServices shoesServices;
+        private Random rnd = new Random();
 
         public ShoesController(IShoesServices _shoesServices)
         {
@@ -17,6 +18,7 @@ namespace DressUp.Controllers
             var pageNumber = page ?? 1;
             int pageSize = 12;
             var onePageOfShoes = shoesServices.GetAllShoes()
+                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfShoes);
@@ -26,6 +28,7 @@ namespace DressUp.Controllers
             var pageNumber = page ?? 1;
             int pageSize = 12;
             var onePageOfShoes = shoesServices.GetShoesMen()
+                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfShoes);
@@ -35,6 +38,7 @@ namespace DressUp.Controllers
             var pageNumber = page ?? 1;
             int pageSize = 12;
             var onePageOfShoes = shoesServices.GetShoesWomen()
+                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfShoes);
@@ -44,6 +48,7 @@ namespace DressUp.Controllers
             var pageNumber = page ?? 1;
             int pageSize = 12;
             var onePageOfShoes = shoesServices.GetShoesChildren()
+                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfShoes);
