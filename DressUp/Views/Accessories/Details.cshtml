@@ -36,3 +36,9 @@
     </div>
     <div class="clearfix"></div>
 </div>
+<script>
+    $('button').click(function(event) {
+        toastr.options.closeButton = true;
+			toastr.success('Успешно добавено към количката');
+		});
+</script>

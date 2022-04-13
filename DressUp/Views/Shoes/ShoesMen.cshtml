@@ -50,7 +50,12 @@
         PageClasses = new[] { "page-link" },
     })
 </section>
-
+<script>
+    $('button').click(function(event) {
+        toastr.options.closeButton = true;
+			toastr.success('Успешно добавено към количката');
+		});
+</script>
 @section Scripts{
     <script>
         $(document).ready(function () {

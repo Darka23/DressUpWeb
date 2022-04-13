@@ -1,4 +1,5 @@
 ﻿
+
 function AddToCart(type, id) {
 
     const obj = {
@@ -14,7 +15,6 @@ function AddToCart(type, id) {
     }
 
     if (localStorageArray.filter(x => x.objId == obj.objId).length <= 0) {
-        console.log(localStorageArray);
         localStorageArray.push(obj);
     }
    

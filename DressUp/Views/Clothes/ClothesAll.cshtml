@@ -4,7 +4,9 @@
 
 @{
     ViewData["Title"] = "Дрехи";
+    
 }
+
 
 <link rel="stylesheet" href="~/css/css/style.css" />
 
@@ -45,8 +47,8 @@
                                 <a href="/Clothes/Details?id=@(item.Id)">
                                     <img class="pic-1 img-fluid" src="@item.ImageUrl">
                                 </a>
-                                <div class="transmitv single-item">
-                                    <button onclick="AddToCart('Cloth',@item.Id)" class="transmitv-cart ptransmitv-cart add-to-cart">
+                                <div  class="transmitv single-item">                                 
+                                    <button id="add" onclick="AddToCart('Cloth',@item.Id)" class="transmitv-cart ptransmitv-cart add-to-cart">
                                         Add to Cart
                                     </button>
                                 </div>
@@ -72,6 +74,13 @@
     PageClasses = new[] { "page-link" },
     })
 </section>
+
+<script>
+    $('button').click(function(event) {
+        toastr.options.closeButton = true;
+			toastr.success('Успешно добавено към количката');
+		});
+</script>
 
 @section Scripts{
 <script>

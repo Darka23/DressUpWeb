@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="~/css/adminlte.min.css" />
     <link rel="stylesheet" href="~/plugins/toastr/toastr.css" />
 
+	<!-- Toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<!-- Toastr -->
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     @await RenderSectionAsync("Head", false)
 </head>
@@ -132,10 +138,11 @@
     </div>
     <!-- ./wrapper -->
     <!-- REQUIRED SCRIPTS -->
+
     <script src=~/js/site.js></script>
     <!-- jQuery -->
     <script src="https://kit.fontawesome.com/d29ab9a788.js" crossorigin="anonymous"></script>
-    <script src="~/plugins/jquery/jquery.min.js"></script>
+    <script src="~/plugins/jquery/jquery.min.js"></script>  
     <!-- Bootstrap 4 -->
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
