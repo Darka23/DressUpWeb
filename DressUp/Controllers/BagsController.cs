@@ -62,5 +62,12 @@ namespace DressUp.Controllers
             var model = bagsServices.GetBagsById(id);
             return View(model);
         }
+
+        public IActionResult Delete(int id)
+        {
+            bagsServices.DeleteBag(id);
+
+            return Redirect("/");
+        }
     }
 }

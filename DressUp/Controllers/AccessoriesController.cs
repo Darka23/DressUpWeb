@@ -101,5 +101,12 @@ namespace DressUp.Controllers
             var model = accessoriesServices.GetAccessoryById(id);
             return View(model);
         }
+
+        public IActionResult Delete(int id)
+        {
+            accessoriesServices.DeleteAccessory(id);
+
+            return Redirect("/");
+        }
     }
 }

@@ -27,8 +27,13 @@
             @if (User.IsInRole("Administrator"))
             {
                 <form>
-                    <a id = "deleteButton" href="/Clothes/Delete?id=@Model.Id" class="btn btn-block btn-danger">
+                    <a id = "deleteButton" href="/Accessories/Delete?id=@Model.Id" class="btn btn-block btn-danger">
                         Delete
+                    </a>
+                </form>
+                <form>
+                    <a id = "editButton" href="/Clothes/Edit?id=@Model.Id" class="btn btn-success">
+                        Edit
                     </a>
                 </form>
             }

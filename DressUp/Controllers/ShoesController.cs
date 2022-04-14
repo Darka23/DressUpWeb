@@ -58,5 +58,12 @@ namespace DressUp.Controllers
             var model = shoesServices.GetShoesById(id);
             return View(model);
         }
+
+        public IActionResult Delete(int id)
+        {
+            shoesServices.DeleteShoes(id);
+
+            return Redirect("/");
+        }
     }
 }

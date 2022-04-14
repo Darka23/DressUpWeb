@@ -17,9 +17,8 @@ namespace DressUp.Controllers
         public IActionResult ClothesMen(int? page)
         {
             var pageNumber = page ?? 1;
-            int pageSize = 12;
+            int pageSize = 8;
             var onePageOfClothes = clothesServices.GetMenClothes()
-                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfClothes);
@@ -28,9 +27,8 @@ namespace DressUp.Controllers
         public IActionResult ClothesWomen(int? page)
         {
             var pageNumber = page ?? 1;
-            int pageSize = 12;
+            int pageSize = 8;
             var onePageOfClothes = clothesServices.GetWomenClothes()
-                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber,pageSize);
 
             return View(onePageOfClothes);
@@ -39,9 +37,8 @@ namespace DressUp.Controllers
         {
             
             var pageNumber = page ?? 1;
-            int pageSize = 12;
+            int pageSize = 8;
             var onePageOfClothes = clothesServices.GetChildrenClothes()
-                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfClothes);
@@ -49,11 +46,9 @@ namespace DressUp.Controllers
 
         public IActionResult ClothesAll(int? page)
         {
-            var rnd = new Random();
             var pageNumber = page ?? 1;
-            int pageSize = 12;
+            int pageSize = 8;
             var onePageOfClothes = clothesServices.GetAllClothes()
-                .OrderBy(x => rnd.Next())
                 .ToPagedList(pageNumber, pageSize);
 
             return View(onePageOfClothes);

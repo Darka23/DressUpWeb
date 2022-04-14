@@ -15,6 +15,8 @@ namespace DressUp.Core.Contracts
         IEnumerable<BagsListViewModel> GetBagsWomen();
         IEnumerable<BagsListViewModel> GetBagsMen();
         IEnumerable<BagsListViewModel> GetBagsChildren();
-        BagsDetailsViewModel GetBagsById(int id); 
+        BagsDetailsViewModel GetBagsById(int id);
+
+        void DeleteBag(int id);
     }
 }

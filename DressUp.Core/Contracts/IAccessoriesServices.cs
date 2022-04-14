@@ -18,5 +18,7 @@ namespace DressUp.Core.Contracts
         IEnumerable<AccessoriesListViewModel> GetAllRings();
         IEnumerable<AccessoriesListViewModel> GetAllEarrings();
         AccessoriesDetailsViewModel GetAccessoryById(int id);
+
+        void DeleteAccessory(int id);
     }
 }

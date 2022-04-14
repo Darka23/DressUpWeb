@@ -124,5 +124,16 @@ namespace DressUp.Core.Services
                 })
                 .FirstOrDefault();
         }
+
+        public void DeleteAccessory(int id)
+        {
+            var accessory = repo.All<Accessory>()
+                .Where(x => x.Id == id)
+                .First();
+
+            repo.Delete(accessory);
+
+            repo.SaveChanges();
+        }
     }
 }
