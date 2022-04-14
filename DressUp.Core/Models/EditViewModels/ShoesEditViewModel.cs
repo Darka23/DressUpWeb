@@ -6,10 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DressUp.Core.Models.AddViewModels
+namespace DressUp.Core.Models.EditViewModels
 {
-    public class ShoesViewModel
+    public class ShoesEditViewModel
     {
+        public int Id { get; set; }
+
         [Required]
         public string Name { get; set; }
 

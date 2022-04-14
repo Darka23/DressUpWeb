@@ -1,26 +1,26 @@
-﻿@model DressUp.Infrastructure.Data.Models.Cloth
-
+﻿@using DressUp.Core.Models.EditViewModels
+@model ShoesEditViewModel
 
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>EditClothes</title>
+    <title>EditShoes</title>
 </head>
 <body>
 
-<h4>Cloth</h4>
+<h4>Shoe</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="EditClothes">
+        <form asp-action="EditShoes" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="ImageUrl" class="control-label"></label>
-                <input asp-for="ImageUrl" class="form-control" />
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" accept="image/heic, image/png, image/jpeg, image/webp" type="file" />
+                <span asp-validation-for="Image" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -33,28 +33,30 @@
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Category">Choose a category:</label>
+                <select asp-for="Category">
+                    <option value="Мъже">Мъже</option>
+                    <option value="Жени">Жени</option>
+                    <option value="Деца">Деца</option>
+                </select>
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Size" class="control-label"></label>
                 <input asp-for="Size" class="form-control" />
                 <span asp-validation-for="Size" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Color" class="control-label"></label>
-                <input asp-for="Color" class="form-control" />
-                <span asp-validation-for="Color" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Category" class="control-label"></label>
-                <input asp-for="Category" class="form-control" />
+                <label asp-for="Condition">Choose a category:</label>
+                <select asp-for="Condition">
+                    <option value="Използвано">Използвано</option>
+                    <option value="Ново">Ново</option>
+                </select>
                 <span asp-validation-for="Category" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Material" class="control-label"></label>
-                <input asp-for="Material" class="form-control" />
-                <span asp-validation-for="Material" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <textarea asp-for="Description" class="form-control" ></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -65,7 +67,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a href="/Shoes/Shoes">Back to List</a>
 </div>
 
 </body>

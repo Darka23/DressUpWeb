@@ -99,20 +99,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5QYW5lbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/DressUpGit/DressUpWeb/DressUp/Views/Admin/EditViews/EditAccessories.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFZpZXdzXEVkaXRBY2Nlc3Nvcmllcy5jc2h0bWw=
+[E:/DressUpGit/DressUpWeb/DressUp/Views/Admin/EditAccessories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFjY2Vzc29yaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/DressUpGit/DressUpWeb/DressUp/Views/Admin/EditViews/EditBags.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFZpZXdzXEVkaXRCYWdzLmNzaHRtbA==
+[E:/DressUpGit/DressUpWeb/DressUp/Views/Admin/EditBags.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEJhZ3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/DressUpGit/DressUpWeb/DressUp/Views/Admin/EditViews/EditClothes.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFZpZXdzXEVkaXRDbG90aGVzLmNzaHRtbA==
+[E:/DressUpGit/DressUpWeb/DressUp/Views/Admin/EditClothes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdENsb3RoZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/DressUpGit/DressUpWeb/DressUp/Views/Admin/EditViews/EditShoes.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFZpZXdzXEVkaXRTaG9lcy5jc2h0bWw=
+[E:/DressUpGit/DressUpWeb/DressUp/Views/Admin/EditShoes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdFNob2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/DressUpGit/DressUpWeb/DressUp/Views/Bags/Bags.cshtml]

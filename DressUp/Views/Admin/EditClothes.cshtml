@@ -1,0 +1,130 @@
+﻿@using DressUp.Core.Models.EditViewModels
+@model ClothesEditViewModel
+
+@{
+    ViewData["Title"] = "Edit Clothes";
+
+    var colors = ViewBag.clothesColors;
+    var materials = ViewBag.clothesMaterials;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EditClothes</title>
+</head>
+<body>
+
+<h4>Cloth</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditClothes" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" accept="image/heic, image/png, image/jpeg, image/webp" type="file" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Size">Choose size:</label>
+                <select asp-for="Size">
+                     <option value="XXS">XXS</option>                  
+                     <option value="XS">XS</option>                  
+                     <option value="S">S</option>                  
+                     <option value="M">M</option>                  
+                     <option value="L">L</option>                  
+                     <option value="XL">XL</option>                  
+                     <option value="XXL">XXL</option>                  
+                     <option value="В описанието">В описанието</option>                  
+                </select>
+                <span asp-validation-for="Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClothingType">Choose clothing type:</label>
+                <select asp-for="ClothingType">
+                     <option value="Тениски">Тениски</option>                  
+                     <option value="Суичъри">Суичъри</option>  
+                     <option value="Якета">Якета</option>      
+                     <option value="Ризи">Ризи</option>                  
+                     <option value="Поли">Поли</option>                  
+                     <option value="Рокли">Рокли</option>                  
+                     <option value="Дънки">Дънки</option>                  
+                     <option value="Блузи">Блузи</option>                  
+                     <option value="Пуловери">Пуловери</option>     
+                     <option value="Панталони">Панталони</option>    
+                     <option value="Къси панталони">Къси панталони</option>    
+                     <option value="Спортни шорти">Спортни шорти</option>                  
+                     <option value="Спортни долнища">Спортни долнища</option>  
+                     <option value="Клинове">Клинове</option>                                         
+                </select>
+                <span asp-validation-for="ClothingType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Color">Choose a color:</label>
+                <select asp-for="Color">
+                    @foreach (var color in colors)
+                    {
+                        <option value="@color.Value">@color.Text</option>
+                    }
+                </select>
+                <span asp-validation-for="Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category">Choose a category:</label>
+                <select asp-for="Category">
+                    <option value="Мъже">Мъже</option>
+                    <option value="Жени">Жени</option>
+                    <option value="Деца">Деца</option>
+                </select>
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Material">Choose a material:</label>
+                <select asp-for="Material">
+                    @foreach (var material in materials)
+                    {
+                        <option value="@material.Value">@material.Text</option>
+                    }
+                </select>
+                <span asp-validation-for="Material" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Condition">Choose a category:</label>
+                <select asp-for="Condition">
+                    <option value="Използвано">Използвано</option>
+                    <option value="Ново">Ново</option>
+                </select>
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a href="/Clothes/Clothes">Back to List</a>
+</div>
+
+</body>
+</html>

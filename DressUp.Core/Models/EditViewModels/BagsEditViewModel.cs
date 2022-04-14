@@ -6,10 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DressUp.Core.Models.AddViewModels
+namespace DressUp.Core.Models.EditViewModels
 {
-    public class ShoesViewModel
+    public class BagsEditViewModel
     {
+        public int Id { get; set; }
+
         [Required]
         public string Name { get; set; }
 
@@ -29,6 +31,9 @@ namespace DressUp.Core.Models.AddViewModels
         public decimal Price { get; set; }
 
         [Required]
-        public string Size { get; set; }
+        public string Material { get; set; }
+
+        [Required]
+        public string Color { get; set; }
     }
 }

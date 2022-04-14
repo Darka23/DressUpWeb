@@ -108,5 +108,10 @@ namespace DressUp.Controllers
 
             return Redirect("/");
         }
+
+        public IActionResult Edit(int id)
+        {
+            return View();
+        }
     }
 }

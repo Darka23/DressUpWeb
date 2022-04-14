@@ -1,6 +1,7 @@
 ﻿using DressUp.Core.Contracts;
 using DressUp.Core.Models;
 using DressUp.Core.Models.AddViewModels;
+using DressUp.Core.Models.EditViewModels;
 using DressUp.Infrastructure.Data.Models;
 using DressUp.Infrastructure.Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -158,6 +159,104 @@ namespace DressUp.Core.Services
         public IEnumerable<Material> GetMaterials()
         {
             return repo.All<Material>().ToList();
+        }
+
+        public async Task<bool> EditClothes([FromForm] ClothesEditViewModel model)
+        {
+            bool result = false;
+            var clothing = await repo.GetByIdAsync<Cloth>(model.Id);
+
+            var imageUrl = cloudinaryService.Image(model.Image, "DressUpImages");
+
+            if (clothing != null)
+            {
+                clothing.ClothingType = model.ClothingType;
+                clothing.Category = model.Category;
+                clothing.Description = model.Description;
+                clothing.Price = model.Price;
+                clothing.Color = model.Color;
+                clothing.Condition = model.Condition;
+                clothing.Material = model.Material;
+                clothing.Name = model.Name;
+                clothing.Size = model.Size;
+                clothing.ImageUrl = imageUrl;
+
+                await repo.SaveChangesAsync();
+                result = true;
+            }
+
+            return result;
+        }
+
+        public async Task<bool> EditShoes([FromForm] ShoesEditViewModel model)
+        {
+            bool result = false;
+            var shoes = await repo.GetByIdAsync<Shoe>(model.Id);
+
+            var imageUrl = cloudinaryService.Image(model.Image, "DressUpImages");
+
+            if (shoes != null)
+            {
+                shoes.Description = model.Description;
+                shoes.Price = model.Price;
+                shoes.Condition = model.Condition;
+                shoes.Name = model.Name;
+                shoes.Size = model.Size;
+                shoes.ImageUrl = imageUrl;
+                shoes.Category = model.Category;
+
+                await repo.SaveChangesAsync();
+                result = true;
+            }
+
+            return result;
+        }
+
+        public async Task<bool> EditAccessories([FromForm] AccessoriesEditViewModel model)
+        {
+            bool result = false;
+            var accessory = await repo.GetByIdAsync<Accessory>(model.Id);
+
+            var imageUrl = cloudinaryService.Image(model.Image, "DressUpImages");
+
+            if (accessory != null)
+            {
+                accessory.Description = model.Description;
+                accessory.Price = model.Price;
+                accessory.Name = model.Name;
+                accessory.ImageUrl = imageUrl;
+                accessory.AccessoryType = model.AccessoryType;
+
+                await repo.SaveChangesAsync();
+                result = true;
+            }
+
+            return result;
+        }
+
+        public async Task<bool> EditBags([FromForm] BagsEditViewModel model)
+        {
+            bool result = false;
+            var bag = await repo.GetByIdAsync<Bag>(model.Id);
+
+            var imageUrl = cloudinaryService.Image(model.Image, "DressUpImages");
+
+            if (bag != null)
+            {
+                bag.Description = model.Description;
+                bag.Price = model.Price;
+                bag.Name = model.Name;
+                bag.ImageUrl = imageUrl;
+                bag.Material = model.Material;
+                bag.Color = model.Color;
+                bag.Category = model.Category;
+                bag.Condition = model.Condition;
+
+                await repo.SaveChangesAsync();
+                result = true;
+            }
+
+            return result;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using DressUp.Core.Models;
 using DressUp.Core.Models.AddViewModels;
+using DressUp.Core.Models.EditViewModels;
 using DressUp.Infrastructure.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +14,10 @@ namespace DressUp.Core.Contracts
         Task AddAccessories([FromForm] AccessoriesViewModel model);
         Task AddShoes([FromForm] ShoesViewModel model);
         Task AddBags([FromForm] BagsViewModel model);
-
+        Task<bool> EditClothes([FromForm] ClothesEditViewModel model);
+        Task<bool> EditShoes([FromForm] ShoesEditViewModel model);
+        Task<bool> EditAccessories([FromForm] AccessoriesEditViewModel model);
+        Task<bool> EditBags([FromForm] BagsEditViewModel model);
 
         IEnumerable<Color> GetColors();
         IEnumerable<Material> GetMaterials();
