@@ -67,7 +67,7 @@ namespace DressUp.Core.Services
                     Id = c.Id,
                     Name = c.Name,
                     ImageUrl = c.ImageUrl,
-                    Price = c.Price
+                    Price = c.Price,
                 });
         }
 

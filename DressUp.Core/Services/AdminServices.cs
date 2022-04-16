@@ -2,9 +2,12 @@
 using DressUp.Core.Models;
 using DressUp.Core.Models.AddViewModels;
 using DressUp.Core.Models.EditViewModels;
+using DressUp.Core.Models.ListViewModels;
+using DressUp.Infrastructure.Data.Identity;
 using DressUp.Infrastructure.Data.Models;
 using DressUp.Infrastructure.Data.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace DressUp.Core.Services
 {
@@ -257,6 +260,31 @@ namespace DressUp.Core.Services
             }
 
             return result;
+        }
+
+        public List<UsersListViewModel> UsersList()
+        {
+            return  repo.All<ApplicationUser>()
+                .Select(x=> new UsersListViewModel()
+                {
+                    Id = x.Id,
+                    Email = x.Email,
+                    Username = x.UserName
+                })
+                .ToList();
+        }
+
+        public void DeleteUser(string id)
+        {
+            var user = repo.All<ApplicationUser>()
+                .Where(x=>x.Id == id)
+                .First();
+
+            if (user != null)
+            {
+                 repo.Delete<ApplicationUser>(user);
+                 repo.SaveChanges();
+            }
         }
     }
 }

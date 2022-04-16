@@ -259,5 +259,23 @@ namespace DressUp.Controllers
 
             return Redirect("/Home/Index");
         }
+
+        public IActionResult UserList()
+        {
+            var users = adminServices.UsersList();
+
+            var model = new
+            {
+                Users = users
+            };
+
+            return View(model);
+        }
+
+        public IActionResult DeleteUser(string id)
+        {
+            adminServices.DeleteUser(id);
+            return Redirect("/Admin/UserList");
+        }
     }
 }
