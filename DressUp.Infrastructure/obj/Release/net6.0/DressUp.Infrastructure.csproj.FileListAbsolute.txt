@@ -1,0 +1,14 @@
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\bin\Release\net6.0\DressUp.Infrastructure.deps.json
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\bin\Release\net6.0\DressUp.Infrastructure.runtimeconfig.json
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\bin\Release\net6.0\DressUp.Infrastructure.dll
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\bin\Release\net6.0\DressUp.Infrastructure.pdb
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\obj\Release\net6.0\DressUp.Infrastructure.csproj.AssemblyReference.cache
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\obj\Release\net6.0\DressUp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\obj\Release\net6.0\DressUp.Infrastructure.AssemblyInfoInputs.cache
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\obj\Release\net6.0\DressUp.Infrastructure.AssemblyInfo.cs
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\obj\Release\net6.0\DressUp.Infrastructure.csproj.CoreCompileInputs.cache
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\obj\Release\net6.0\DressUp.Infrastructure.dll
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\obj\Release\net6.0\refint\DressUp.Infrastructure.dll
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\obj\Release\net6.0\DressUp.Infrastructure.pdb
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\obj\Release\net6.0\DressUp.Infrastructure.genruntimeconfig.cache
+E:\DressUpGit\DressUpWeb\DressUp.Infrastructure\obj\Release\net6.0\ref\DressUp.Infrastructure.dll
