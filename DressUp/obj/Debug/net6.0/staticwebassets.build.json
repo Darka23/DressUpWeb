@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7U9EuYztFHsSII3YtVM7uNYHNBy8JIsPOvubol56Mms=",
+  "Hash": "7Q3CPsXoV4HbXuqxBqfMi8G+c+4wMUIOKrTPiQt5Jfk=",
   "Source": "DressUp",
   "BasePath": "_content/DressUp",
   "Mode": "Default",
@@ -1664,6 +1664,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\faviconOld.ico",
+      "SourceId": "DressUp",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\",
+      "BasePath": "_content/DressUp",
+      "RelativePath": "faviconOld.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\faviconOld.ico"
     },
     {
       "Identity": "E:\\DressUpGit\\DressUpWeb\\DressUp\\wwwroot\\img\\avatar5.png",

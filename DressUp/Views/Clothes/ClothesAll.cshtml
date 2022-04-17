@@ -4,7 +4,7 @@
 
 @{
     ViewData["Title"] = "Дрехи";
-    
+
 }
 
 
@@ -16,50 +16,40 @@
     </a>
 </div>
 
-<select>
-    <option value="Тениски">Тениски</option>
-    <option value="Суичъри">Суичъри</option>
-    <option value="Якета">Якета</option>
-    <option value="Ризи">Ризи</option>
-    <option value="Поли">Поли</option>
-    <option value="Рокли">Рокли</option>
-    <option value="Дънки">Дънки</option>
-    <option value="Блузи">Блузи</option>
-    <option value="Пуловери">Пуловери</option>
-    <option value="Панталони">Панталони</option>
-    <option value="Къси панталони">Къси панталони</option>
-    <option value="Спортни шорти">Спортни шорти</option>
-    <option value="Спортни долнища">Спортни долнища</option>
-    <option value="Клинове">Клинове</option>
-</select>
 
 <section class="w3l-ecommerce-main">
     <div class="ecom-contenthny py-5">
         <div class="container py-lg-5">
             <!-- /row-->
 
+                <div class="boxContainer">
             <div class="ecom-products-grids row mt-lg-5 mt-3">
+
                 @foreach (var item in Model)
                 {
-                    <div class="col-lg-3 col-6 product-incfhny mt-4">
-                        <div class="product-grid2 transmitv">
-                            <div class="product-image2">
-                                <a href="/Clothes/Details?id=@(item.Id)">
-                                    <img class="pic-1 img-fluid" src="@item.ImageUrl">
-                                </a>
-                                <div  class="transmitv single-item">                                 
-                                    <button id="add" onclick="AddToCart('Cloth',@item.Id)" class="transmitv-cart ptransmitv-cart add-to-cart">
-                                        Add to Cart
-                                    </button>
+                        <div class="col-lg-3 col-6 product-incfhny mt-4">
+                            <div class="product-grid2 transmitv">
+                    <div class="box" data-item="@item.ClothingType">
+                                <div class="product-image2">
+                                    <a href="/Clothes/Details?id=@(item.Id)">
+                                        <img class="pic-1 img-fluid" src="@item.ImageUrl">
+                                    </a>
+                                    <div class="transmitv single-item">
+                                        <button id="add" onclick="AddToCart('Cloth',@item.Id)" class="transmitv-cart ptransmitv-cart add-to-cart">
+                                            Add to Cart
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="product-content">
-                                <h3 class="title"><a href="/Clothes/Details?id=@(item.Id)">@item.Name</a></h3>
-                                <span class="price">@Math.Round(item.Price,2)лв.</span>
+                                <div class="product-content">
+                                    <h3 class="title"><a href="/Clothes/Details?id=@(item.Id)">@item.Name</a></h3>
+                                    <span class="price">@Math.Round(item.Price,2)лв.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 }
+                </div>
+
             </div>
             <!-- //row-->
         </div>
@@ -76,10 +66,10 @@
 </section>
 
 <script>
-        $('button').click(function(event) {
-        toastr.options.closeButton = true;
-			toastr.success('Успешно добавено към количката');
-		});
+    $("#add").click(function(event) {
+    toastr.options.closeButton = true;
+        toastr.success('Успешно добавено към количката');
+    });
 </script>
 
 @section Scripts{

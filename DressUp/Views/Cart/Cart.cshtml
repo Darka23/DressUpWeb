@@ -5,29 +5,29 @@
 <h1 class="cartHeader">Количка</h1>
 
 <div>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th id="productGrid" scope="col">Продукт</th>
-            <th id="productGrid" scope="col">Име</th>
-            <th id="productGrid" scope="col">Цена</th>
-            <th id="productGrid" scope="col"></th>
-        </tr>
-    </thead>
-    <tbody id="cartContent">
-
-        
-    </tbody>
-</table>
-<div class="contentCheckout">
-            <button id="checkoutBtn" class="btn btn-primary pull-right" onclick="BuyProducts()">Купи</button>
-        </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th id="productGrid" scope="col">Продукт</th>
+                <th id="productGrid" scope="col">Име</th>
+                <th id="productGrid" scope="col">Цена</th>
+                <th id="productGrid" scope="col">Междинна сума</th>
+                <th id="productGrid" scope="col"></th>
+            </tr>
+        </thead>
+        <tbody id="cartContent">
+        </tbody>
+    </table>
+    <div class="contentCheckout">
+        <button id="checkoutBtn" class="btn btn-primary pull-right" onclick="BuyProducts()">Купи</button>
+    </div>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 
     $(document).ready(function() {
+
 
         var button = document.getElementById("checkoutBtn");
 
@@ -47,6 +47,8 @@
 
         let options = {};
 
+        let totalPrice = 0;
+
         lsObj.forEach(x=> {
 
             options.url = "/Cart/GetCartItemFor"+x.type;
@@ -55,12 +57,13 @@
             options.dataType = "json";
 
             options.success = (data) => {
-
+                        totalPrice+=data.price;
                     tbody.append(`
                         <tr id="`+ x.type+x.id +`">
                             <td><img class="product-img" src="`+ data.imageUrl + `" /></td>
                             <td>`+ data.name +`</td>
                             <td>`+ data.price.toFixed(2) +"лв."+`</td>
+                            <td><p style="font-size:25px;">`+totalPrice.toFixed(2)+"лв."+`</p></td>
                             <td>
                                 <a onclick="RemoveFromCart(this)">
                                     <i class="fa-solid fa-circle-xmark"></i>
@@ -69,8 +72,8 @@
                         </tr>`);
             }
 
-
         $.ajax(options);
+
         });
     });
 
@@ -103,4 +106,5 @@
                 localStorage.clear();
                 location.href = "/Cart/Buy";
             }
+
 </script>
