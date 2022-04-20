@@ -1,9 +1,4 @@
-﻿using DressUp.Core.Constants;
-using DressUp.Core.Models.CartModels;
-using DressUp.Models;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Diagnostics;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace DressUp.Controllers
 {

@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NUnit.Framework;
 using System;
 using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace DressUp.Tests
@@ -33,15 +34,14 @@ namespace DressUp.Tests
                 .BuildServiceProvider();
 
             var repo = serviceProvider.GetService<ApplicationDbRepository>();
-            await SeedDbAsync(repo);
+            //await SeedDbAsync(repo);
         }
 
         [Test]
         public void AddingAccessoryThrowingException()
         {
-            
+            Assert.Pass();
         }
-
         [Test]
         public void AddingAccessoryNotThrowingException()
         {
@@ -54,18 +54,22 @@ namespace DressUp.Tests
             dbContext.Dispose();
         }
 
-        private async Task SeedDbAsync(IApplicationDbRepository repo)
-        {
-            var accessory = new Accessory
-            {
-                AccessoryType = "tigan",
-                ImageUrl = "http://jumbo-online.bg/30667-superlarge_default/Tigan-nezalepvaso-pokritie-20-sm-1069297.jpg",
-                Name = "Gosho",
-                Price = 15
-            };
+        //private async Task SeedDbAsync(IApplicationDbRepository repo)
+        //{
+        //    var bytes = Encoding.UTF8.GetBytes("This is a dummy file");
+        //    IFormFile file = new FormFile(new MemoryStream(bytes), 0, bytes.Length, "Data", "dummy.txt");
 
-            await repo.AddAsync(accessory);
-            await repo.SaveChangesAsync();
-        }
+        //    var accessory = new Accessory
+        //    {
+        //        AccessoryType = "tigan",
+        //        Name = "Gosho",
+        //        ImageUrl = "",
+        //        Description = "sd",
+        //        Price = 15
+        //    };
+
+        //    await repo.AddAsync(accessory);
+        //    await repo.SaveChangesAsync();
+        //}
     }
 }

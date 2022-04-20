@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="~/plugins/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" href="~/css/adminlte.min.css" />
     <link rel="stylesheet" href="~/plugins/toastr/toastr.css" />
-    <link runat="server" rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
 	<!-- Toastr -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -36,7 +35,7 @@
                     </a>
                 @if (User.IsInRole("Administrator"))
                 {
-                    <a class="nav-link btn btn-link text-dark" href="/Admin/AdminPanel" role="button">
+                    <a class="nav-link btn btn-link text-dark" href="/Admin/Admin/AdminPanel" role="button">
                         <i class="fa-solid fa-toolbox"></i>
                         &nbsp; Administration Panel
                     </a>

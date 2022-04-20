@@ -6,6 +6,7 @@ using DressUp.Infrastructure.Data;
 using DressUp.Infrastructure.Data.Identity;
 using DressUp.ModelBinders;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,6 +24,7 @@ builder.Services.AddControllersWithViews()
         options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
         options.ModelBinderProviders.Insert(1, new DateTimeModelBinderProvider(FormatingConstants.NormalDateFormat));
         options.ModelBinderProviders.Insert(2, new DoubleModelBinderProvider());
+        options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
     });
 
 Account account = new(
@@ -69,6 +71,10 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseSession(); // moje da ne e tuk!!!
+
+app.MapControllerRoute(
+    name: "Area",
+    pattern: "{area:exists}/{controller=Admin}/{action=AdminPanel}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

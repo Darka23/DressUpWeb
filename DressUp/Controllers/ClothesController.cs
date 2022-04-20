@@ -47,7 +47,7 @@ namespace DressUp.Controllers
         public IActionResult ClothesAll(int? page)
         {
             var pageNumber = page ?? 1;
-            int pageSize = 8;
+            int pageSize = 4;
             var onePageOfClothes = clothesServices.GetAllClothes()
                 .ToPagedList(pageNumber, pageSize);
 

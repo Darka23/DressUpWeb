@@ -5,6 +5,7 @@ using DressUp.Infrastructure.Data.Common;
 using DressUp.Core.Contracts;
 using DressUp.Core.Services;
 using CloudinaryDotNet;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -19,7 +20,7 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddScoped<IBagsServices, BagsServices>();
             services.AddScoped<IShoesServices, ShoesServices>();
             services.AddScoped<IAccessoriesServices, AccessoriesServices>();
-            services.AddScoped<ICartServices, CartServices>();
+            services.AddScoped<ICartServices, CartServices>();        
 
             return services;
         }

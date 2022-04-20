@@ -76,7 +76,7 @@ namespace DressUp.Core.Services
 
         }
 
-        public async Task AddClothes([FromForm]ClothesViewModel model)
+        public async Task AddClothes([FromForm] ClothesViewModel model)
         {
             var existing = repo.All<Cloth>()
                 .Where(c => c.Name == model.Name)

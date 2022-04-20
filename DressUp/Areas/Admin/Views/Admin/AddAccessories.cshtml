@@ -1,0 +1,60 @@
+﻿@model DressUp.Core.Models.AddViewModels.AccessoriesViewModel
+
+@{
+    ViewData["Title"] = "Add Accessories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Add Accessories</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddAccessories" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" accept="image/heic, image/png, image/jpeg, image/webp" type="file" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AccessoryType">Choose an accessory type:</label>
+                <select asp-for="AccessoryType">
+                    <option value="Часовник">Часовник</option>
+                    <option value="Колие">Колие</option>
+                    <option value="Гривна">Гривна</option>
+                    <option value="Ключодържател">Ключодържател</option>
+                    <option value="Пръстен">Пръстен</option>
+                    <option value="Обеци">Обеци</option>
+                </select>
+                <span asp-validation-for="AccessoryType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" ></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="AdminPanel">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
