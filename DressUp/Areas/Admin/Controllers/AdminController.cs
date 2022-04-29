@@ -30,14 +30,12 @@ namespace DressUp.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> AddColor(ColorViewModel model)
         {
-            try
-            {
-                await adminServices.AddColor(model);
-            }
-            catch (ArgumentException ae)
+            if (!ModelState.IsValid)
             {
                 return RedirectToAction("AddColor", "Admin");
             }
+
+            await adminServices.AddColor(model);
 
             return Redirect("/Admin/Admin/AdminPanel");
         }
@@ -50,14 +48,12 @@ namespace DressUp.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> AddMaterial(MaterialViewModel model)
         {
-            try
-            {
-                await adminServices.AddMaterial(model);
-            }
-            catch (ArgumentException ae)
+            if (!ModelState.IsValid)
             {
                 return RedirectToAction("AddMaterial", "Admin");
             }
+
+            await adminServices.AddMaterial(model);
 
             return Redirect("/Admin/Admin/AdminPanel");
         }
@@ -100,14 +96,12 @@ namespace DressUp.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> AddBags(BagsViewModel model)
         {
-            try
-            {
-                await adminServices.AddBags(model);
-            }
-            catch (ArgumentException ae)
+            if (!ModelState.IsValid)
             {
                 return RedirectToAction("AddBags", "Admin");
             }
+
+            await adminServices.AddBags(model);
 
             return Redirect("/Admin/Admin/AdminPanel");
         }
@@ -121,14 +115,12 @@ namespace DressUp.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> AddAccessories(AccessoriesViewModel model)
         {
-            try
-            {
-                await adminServices.AddAccessories(model);
-            }
-            catch (ArgumentException ae)
+            if (!ModelState.IsValid)
             {
                 return RedirectToAction("AddAccessory", "Admin");
             }
+
+            await adminServices.AddAccessories(model);
 
             return Redirect("/Admin/Admin/AdminPanel");
         }
@@ -142,14 +134,11 @@ namespace DressUp.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> AddShoes(ShoesViewModel model)
         {
-            try
-            {
-                await adminServices.AddShoes(model);
-            }
-            catch (ArgumentException ae)
+            if (!ModelState.IsValid)
             {
                 return RedirectToAction("AddShoes", "Admin");
             }
+            await adminServices.AddShoes(model);
 
             return Redirect("/Admin/Admin/AdminPanel");
         }
@@ -184,7 +173,7 @@ namespace DressUp.Areas.Admin.Controllers
         }
 
         public IActionResult EditShoes(int id)
-        {
+        {          
             return View();
         }
 

@@ -47,8 +47,7 @@
 
         let options = {};
 
-            let n = 0;
-
+            
         lsObj.forEach(x=> {
 
 
@@ -75,10 +74,8 @@
                         </tr>`);
 
 
-            if(Object.keys(lsObj).length-1===n){
-                tbody.append(`<td>`+ totalPrice +""+`</td>`);
-            }
-                n++;
+            
+            
             }
 
             $.ajax(options);
@@ -93,7 +90,7 @@
                var button = document.getElementById("checkoutBtn");
 
                let cart = JSON.parse(localStorage.getItem("Cart"));
-
+               console.log(cart);
                cart.forEach(x=>{
 
                    if (x.objId==trId) {
