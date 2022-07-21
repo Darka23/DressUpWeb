@@ -28,6 +28,7 @@ namespace DressUp.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddColor(ColorViewModel model)
         {
             if (!ModelState.IsValid)
@@ -46,6 +47,7 @@ namespace DressUp.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddMaterial(MaterialViewModel model)
         {
             if (!ModelState.IsValid)
@@ -70,6 +72,7 @@ namespace DressUp.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddClothes(ClothesViewModel model)
         {
             if (!ModelState.IsValid)
@@ -94,6 +97,7 @@ namespace DressUp.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddBags(BagsViewModel model)
         {
             if (!ModelState.IsValid)
@@ -113,6 +117,7 @@ namespace DressUp.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddAccessories(AccessoriesViewModel model)
         {
             if (!ModelState.IsValid)
@@ -132,6 +137,7 @@ namespace DressUp.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddShoes(ShoesViewModel model)
         {
             if (!ModelState.IsValid)
@@ -256,7 +262,7 @@ namespace DressUp.Areas.Admin.Controllers
         public IActionResult DeleteUser(string id)
         {
             adminServices.DeleteUser(id);
-            return Redirect("/Admin/UserList");
+            return Redirect("/Admin/Admin/UserList");
         }
     }
 }

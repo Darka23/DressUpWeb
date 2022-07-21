@@ -70,7 +70,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseSession(); // moje da ne e tuk!!!
+app.UseSession(); 
 
 app.MapControllerRoute(
     name: "Area",

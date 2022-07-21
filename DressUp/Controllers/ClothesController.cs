@@ -17,7 +17,7 @@ namespace DressUp.Controllers
         public IActionResult ClothesMen(int? page)
         {
             var pageNumber = page ?? 1;
-            int pageSize = 8;
+            int pageSize = 4;
             var onePageOfClothes = clothesServices.GetMenClothes()
                 .ToPagedList(pageNumber, pageSize);
 
@@ -27,7 +27,7 @@ namespace DressUp.Controllers
         public IActionResult ClothesWomen(int? page)
         {
             var pageNumber = page ?? 1;
-            int pageSize = 8;
+            int pageSize = 4;
             var onePageOfClothes = clothesServices.GetWomenClothes()
                 .ToPagedList(pageNumber,pageSize);
 
@@ -37,7 +37,7 @@ namespace DressUp.Controllers
         {
             
             var pageNumber = page ?? 1;
-            int pageSize = 8;
+            int pageSize = 4;
             var onePageOfClothes = clothesServices.GetChildrenClothes()
                 .ToPagedList(pageNumber, pageSize);
 
